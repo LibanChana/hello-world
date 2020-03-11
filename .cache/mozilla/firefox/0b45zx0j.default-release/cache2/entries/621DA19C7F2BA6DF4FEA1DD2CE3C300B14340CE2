@@ -1,0 +1,486 @@
+//In Google Analytics you'll need to set up custom dimensions as follows
+// Custom Dimension 1 = Canvas User ID --- Scope = User
+// Custom Dimension 2 = Archived --- Scope = User
+// Custom Dimension 3 = Canvas User Role --- Scope = User
+// Custom Dimension 4 = Canvas Course ID --- Scope = Hit
+// Custom Dimension 5 = Canvas Course Name --- Scope = Hit
+// Custom Dimension 6 = Canvas Sub-Account ID --- Scope = Hit
+
+(function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+$(document).ready(function() {
+
+    // START - More Google Analytics Tracking Code
+    var sUserId
+    var sUserRole
+    var sTemp // Course ID from URL
+    var _course
+    var sCourseName = null
+    var parent_account //Give you the subaccount_id that the course is in
+
+    ////////////////// CHANGE UA # HERE /////////////////////
+    ga('create', 'UA-108505559-1', 'auto');
+
+    //Get User Information
+    sUserId = ENV["current_user_id"]
+    ga('set', 'dimension1', sUserId);
+
+
+    //Get User Role
+    if ($.inArray('admin', ENV['current_user_roles']) == -1 && $.inArray('teacher', ENV['current_user_roles']) == -1 && $.inArray('student', ENV['current_user_roles']) > -1) {
+        sUserRole = "student"
+    } else if ($.inArray('admin', ENV['current_user_roles']) == -1 && $.inArray('teacher', ENV['current_user_roles']) > -1) {
+        sUserRole = "teacher"
+    } else if ($.inArray('admin', ENV['current_user_roles']) > -1) {
+        sUserRole = "admin"
+    } else {
+        sUserRole = "other"
+    }
+
+    ga('set', 'dimension3', sUserRole);
+
+    //If the user is in a course
+    try {
+        sTemp = window.location.pathname.match(/\/courses\/(\d+)/);
+        if (sTemp[1]) {
+
+            //Get Course information - Course Name and parent sub-account id
+            var d1 = $.get('/api/v1/courses/' + sTemp[1], function(_course) {
+                parent_account = _course.account_id
+                parent_account = parent_account.toString();
+                sCourseName = _course.name
+            });
+
+
+            $.when(d1).done(function(_account) {
+                // ...do stuff...
+                ga('set', 'dimension4', sTemp[1]);
+                ga('set', 'dimension5', sCourseName);
+                ga('set', 'dimension6', parent_account);
+                ga('send', 'pageview');
+            });
+        } else {
+            ga('send', 'pageview');
+        }
+    } catch (err) {}
+
+    // END - Google Analytics Tracking Code
+
+});
+
+
+// Custom JS for chaning UI fields
+
+/*
+----------------------------------
+disabling the export content button
+----------------------------------
+*/
+
+
+$(document).ready(function() {
+    // Handler for .ready() called.
+    $('button.offline_web_export').hide();
+    $('input#course_organize_epub_by_content_type').hide();
+
+});
+
+/*
+----------------------------------------------
+Generate a universal "Student View" button on 
+---------------------------------------------
+ */
+var universalStudentView = function() {
+    var isTeacher, isCourse, courseId, templateButton, sutdentViewVisible, studentViewURL, getPath;
+    
+    // Determine if the user is actually a teacher
+    if (ENV['current_user_roles'].includes('teacher') && $('.ic-app-course-menu.list-view nav #section-tabs li.section a[title="Settings"]').is(":visible")) {
+        isTeacher = true;
+    } else {
+        isTeacher = false;
+    }
+
+    // Get the current Course ID and path based on the url of the course
+    isCourse = window.location.href.indexOf("/courses/") > -1;
+    getPath = window.location.pathname;
+    
+    // Determine if the template button is currently visible
+    templateButton = $('.btn.button-sidebar-wide.element_toggler.choose_home_page_link').is(':visible');
+    
+    // Determine if the user is currently in student view
+    studentViewVisible = $('.ic-alert-masquerade-student-view').is(':visible');
+
+    // Validate rendering the universal button based on the variables
+
+    /*
+
+    If the user is truly a teacher for this course/student
+     view is not already enabled, render the button 
+
+     */
+    if(isTeacher && isCourse && studentViewVisible == false) { 
+        courseId = getPath.split('courses/').pop().split('/')[0]
+        studentViewURL = "/courses/" + courseId + "/student_view";
+        $('.ic-app-nav-toggle-and-crumbs.no-print').append('<a class="btn button-sidebar-wide quick-access" href="' + studentViewURL + '" rel="nofollow" data-method="post"><i class="icon-student-view" role="presentation"></i> Launch Student View</a>')
+    } else { // If the user is not a teacher or student view is already enabled
+        $('.ic-app-nav-toggle-and-crumbs.no-print').remove('.btn.button-sidebar-wide.quick-access')
+    }
+}
+
+/* ------------------ END FUNCTION SECTION */
+
+/* ------------------ RUN ON PAGE LOAD */
+
+$(document).ready(function () {
+    universalStudentView()
+})
+
+// end of student view by teachers
+
+
+/*
+---------------------
+view feedback function while submitting assignments
+--------------------------
+*/
+
+$(window).bind('load', function() {
+    // sets variables equal to the  doc button and the feedback buttons
+    var getDocButton = $('.submission-details-frame iframe').contents().find('a.file-upload-submission-info__link')
+    var getFbButton = $('.submission-details-frame iframe').contents().find('a.modal_preview_link.Button--link')
+    
+    // Add classes to target variables to specify css for those elements
+    getDocButton.addClass('download')
+    getFbButton.addClass('feedback-btn')
+
+    // Handles clicking view feedback button
+    $(document).on('click', 'a.feedback-btn', function() {
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').removeClass('for-feedback'); // always set overlay to normal state when first opened
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').append('<div class="expand-btn"></div>') // Adds the fullscreen button to the overlay container
+    })
+
+    // Handles clicking fullscreen button
+    $(document).on('click', 'div.expand-btn', function() {
+        if(window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').hasClass('for-feedback')) { // Only do this if the overlay already has the for-feedback class
+            // Removes expand and for-feedback classes, returning window sizes to no fullscreen and reseting document view
+            window.parent.$('#preview_frame').removeClass('expand')
+            window.parent.$('.submission-details-frame iframe').contents().find('div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable').removeClass('for-feedback');
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-dialog-content.ui-widget-content').removeClass('for-feedback');
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').removeClass('for-feedback');
+            window.parent.$('.submission-details-frame iframe').contents().find('div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable').css({'min-height': '97px','height': '200px', 'width' : '90%'});
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-dialog-content.ui-widget-content').css('width', '100%');
+        } else { // overlay doesn't have for-feedback class
+            // Adds expand and for-feedback classes, enlarging containers and taking doc view to full screen
+            window.parent.$('#preview_frame').addClass('expand')
+            window.parent.$('.submission-details-frame iframe').contents().find('div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable').addClass('for-feedback');
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-dialog-content.ui-widget-content').addClass('for-feedback');
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').addClass('for-feedback');
+        }
+    });
+
+    // Handles close button of doc view being clicked
+    $(document).on('click', 'span.ui-icon.ui-icon-closethick',function() {
+        // Removes expand and for-feedback classes, returning window sizes to no fullscreen and reseting document view
+        // Completely removes fullscreen button from overlay container  
+        window.parent.$('.submission-details-frame iframe').contents().find('div.expand-btn').remove();
+        window.parent.$('#preview_frame').removeClass('expand')
+        window.parent.$('.submission-details-frame iframe').contents().find('div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable').removeClass('for-feedback');
+        window.parent.$('.submission-details-frame iframe').contents().find('.ui-dialog-content.ui-widget-content').removeClass('for-feedback');
+        window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').removeClass('for-feedback');
+    })
+
+});        20200117190643q   )   universalStudentView   i   s   o   g   r   a   m   i[r]<+   GoogleAnalyticsObject	   Date   l   createElement)   getElementsByTagName   async   src   parentNode   insertBefore   sTemp   sCourseName   parent_account   window   document   script[   https://www.google-analytics.com/analytics.js   ga   $   ready	   bind	   load   sUserId   sUserRole   _course   d1!   \/courses\/(\d+)   d1<   err   create   UA-108505559-1	   auto   ENV   current_user_id   set   dimension1   inArray   admin%   current_user_roles   teacher   student   other   dimension3   location   pathname   match   get!   /api/v1/courses/	   when	   done	   send   pageview3   button.offline_web_export	   hideU   input#course_organize_epub_by_content_type   isTeacher   isCourse   courseId   templateButton%   sutdentViewVisible   studentViewURL   getPath   includesù   .ic-app-course-menu.list-view nav #section-tabs li.section a[title="Settings"]   is   :visible	   href   indexOf   /courses/}   .btn.button-sidebar-wide.element_toggler.choose_home_page_link%   studentViewVisibleC   .ic-alert-masquerade-student-view   split   courses/   pop   /   /student_viewM   .ic-app-nav-toggle-and-crumbs.no-print   appendm   <a class="btn button-sidebar-wide quick-access" href="„   " rel="nofollow" data-method="post"><i class="icon-student-view" role="presentation"></i> Launch Student View</a>   removeK   .btn.button-sidebar-wide.quick-access   account_id   toString	   name   _account   dimension4   dimension5   dimension6   getDocButton   getFbButtonA   .submission-details-frame iframe   contents	   findG   a.file-upload-submission-info__linkC   a.modal_preview_link.Button--link   addClass   download   feedback-btn   on   click   a.feedback-btn   div.expand-btn?   span.ui-icon.ui-icon-closethick                         Y$      Y$    Y$  //In Google Analytics you'll need to set up custom dimensions as follows
+// Custom Dimension 1 = Canvas User ID --- Scope = User
+// Custom Dimension 2 = Archived --- Scope = User
+// Custom Dimension 3 = Canvas User Role --- Scope = User
+// Custom Dimension 4 = Canvas Course ID --- Scope = Hit
+// Custom Dimension 5 = Canvas Course Name --- Scope = Hit
+// Custom Dimension 6 = Canvas Sub-Account ID --- Scope = Hit
+
+(function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+$(document).ready(function() {
+
+    // START - More Google Analytics Tracking Code
+    var sUserId
+    var sUserRole
+    var sTemp // Course ID from URL
+    var _course
+    var sCourseName = null
+    var parent_account //Give you the subaccount_id that the course is in
+
+    ////////////////// CHANGE UA # HERE /////////////////////
+    ga('create', 'UA-108505559-1', 'auto');
+
+    //Get User Information
+    sUserId = ENV["current_user_id"]
+    ga('set', 'dimension1', sUserId);
+
+
+    //Get User Role
+    if ($.inArray('admin', ENV['current_user_roles']) == -1 && $.inArray('teacher', ENV['current_user_roles']) == -1 && $.inArray('student', ENV['current_user_roles']) > -1) {
+        sUserRole = "student"
+    } else if ($.inArray('admin', ENV['current_user_roles']) == -1 && $.inArray('teacher', ENV['current_user_roles']) > -1) {
+        sUserRole = "teacher"
+    } else if ($.inArray('admin', ENV['current_user_roles']) > -1) {
+        sUserRole = "admin"
+    } else {
+        sUserRole = "other"
+    }
+
+    ga('set', 'dimension3', sUserRole);
+
+    //If the user is in a course
+    try {
+        sTemp = window.location.pathname.match(/\/courses\/(\d+)/);
+        if (sTemp[1]) {
+
+            //Get Course information - Course Name and parent sub-account id
+            var d1 = $.get('/api/v1/courses/' + sTemp[1], function(_course) {
+                parent_account = _course.account_id
+                parent_account = parent_account.toString();
+                sCourseName = _course.name
+            });
+
+
+            $.when(d1).done(function(_account) {
+                // ...do stuff...
+                ga('set', 'dimension4', sTemp[1]);
+                ga('set', 'dimension5', sCourseName);
+                ga('set', 'dimension6', parent_account);
+                ga('send', 'pageview');
+            });
+        } else {
+            ga('send', 'pageview');
+        }
+    } catch (err) {}
+
+    // END - Google Analytics Tracking Code
+
+});
+
+
+// Custom JS for chaning UI fields
+
+/*
+----------------------------------
+disabling the export content button
+----------------------------------
+*/
+
+
+$(document).ready(function() {
+    // Handler for .ready() called.
+    $('button.offline_web_export').hide();
+    $('input#course_organize_epub_by_content_type').hide();
+
+});
+
+/*
+----------------------------------------------
+Generate a universal "Student View" button on 
+---------------------------------------------
+ */
+var universalStudentView = function() {
+    var isTeacher, isCourse, courseId, templateButton, sutdentViewVisible, studentViewURL, getPath;
+    
+    // Determine if the user is actually a teacher
+    if (ENV['current_user_roles'].includes('teacher') && $('.ic-app-course-menu.list-view nav #section-tabs li.section a[title="Settings"]').is(":visible")) {
+        isTeacher = true;
+    } else {
+        isTeacher = false;
+    }
+
+    // Get the current Course ID and path based on the url of the course
+    isCourse = window.location.href.indexOf("/courses/") > -1;
+    getPath = window.location.pathname;
+    
+    // Determine if the template button is currently visible
+    templateButton = $('.btn.button-sidebar-wide.element_toggler.choose_home_page_link').is(':visible');
+    
+    // Determine if the user is currently in student view
+    studentViewVisible = $('.ic-alert-masquerade-student-view').is(':visible');
+
+    // Validate rendering the universal button based on the variables
+
+    /*
+
+    If the user is truly a teacher for this course/student
+     view is not already enabled, render the button 
+
+     */
+    if(isTeacher && isCourse && studentViewVisible == false) { 
+        courseId = getPath.split('courses/').pop().split('/')[0]
+        studentViewURL = "/courses/" + courseId + "/student_view";
+        $('.ic-app-nav-toggle-and-crumbs.no-print').append('<a class="btn button-sidebar-wide quick-access" href="' + studentViewURL + '" rel="nofollow" data-method="post"><i class="icon-student-view" role="presentation"></i> Launch Student View</a>')
+    } else { // If the user is not a teacher or student view is already enabled
+        $('.ic-app-nav-toggle-and-crumbs.no-print').remove('.btn.button-sidebar-wide.quick-access')
+    }
+}
+
+/* ------------------ END FUNCTION SECTION */
+
+/* ------------------ RUN ON PAGE LOAD */
+
+$(document).ready(function () {
+    universalStudentView()
+})
+
+// end of student view by teachers
+
+
+/*
+---------------------
+view feedback function while submitting assignments
+--------------------------
+*/
+
+$(window).bind('load', function() {
+    // sets variables equal to the  doc button and the feedback buttons
+    var getDocButton = $('.submission-details-frame iframe').contents().find('a.file-upload-submission-info__link')
+    var getFbButton = $('.submission-details-frame iframe').contents().find('a.modal_preview_link.Button--link')
+    
+    // Add classes to target variables to specify css for those elements
+    getDocButton.addClass('download')
+    getFbButton.addClass('feedback-btn')
+
+    // Handles clicking view feedback button
+    $(document).on('click', 'a.feedback-btn', function() {
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').removeClass('for-feedback'); // always set overlay to normal state when first opened
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').append('<div class="expand-btn"></div>') // Adds the fullscreen button to the overlay container
+    })
+
+    // Handles clicking fullscreen button
+    $(document).on('click', 'div.expand-btn', function() {
+        if(window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').hasClass('for-feedback')) { // Only do this if the overlay already has the for-feedback class
+            // Removes expand and for-feedback classes, returning window sizes to no fullscreen and reseting document view
+            window.parent.$('#preview_frame').removeClass('expand')
+            window.parent.$('.submission-details-frame iframe').contents().find('div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable').removeClass('for-feedback');
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-dialog-content.ui-widget-content').removeClass('for-feedback');
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').removeClass('for-feedback');
+            window.parent.$('.submission-details-frame iframe').contents().find('div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable').css({'min-height': '97px','height': '200px', 'width' : '90%'});
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-dialog-content.ui-widget-content').css('width', '100%');
+        } else { // overlay doesn't have for-feedback class
+            // Adds expand and for-feedback classes, enlarging containers and taking doc view to full screen
+            window.parent.$('#preview_frame').addClass('expand')
+            window.parent.$('.submission-details-frame iframe').contents().find('div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable').addClass('for-feedback');
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-dialog-content.ui-widget-content').addClass('for-feedback');
+            window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').addClass('for-feedback');
+        }
+    });
+
+    // Handles close button of doc view being clicked
+    $(document).on('click', 'span.ui-icon.ui-icon-closethick',function() {
+        // Removes expand and for-feedback classes, returning window sizes to no fullscreen and reseting document view
+        // Completely removes fullscreen button from overlay container  
+        window.parent.$('.submission-details-frame iframe').contents().find('div.expand-btn').remove();
+        window.parent.$('#preview_frame').removeClass('expand')
+        window.parent.$('.submission-details-frame iframe').contents().find('div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable').removeClass('for-feedback');
+        window.parent.$('.submission-details-frame iframe').contents().find('.ui-dialog-content.ui-widget-content').removeClass('for-feedback');
+        window.parent.$('.submission-details-frame iframe').contents().find('.ui-widget-overlay').removeClass('for-feedback');
+    })
+
+});  o   https://instructure-uploads-eu.s3.eu-west-1.amazonaws.com/account_118060000000000001/attachments/6742/canvas.js   ç!´!Ä!´!ˇˇˇˇ             å!´!ç!´!       C   	   	                  ©  ‡  °  ‡      ç!´!å!´!ˇˇˇˇ                                å!´!ç!´!          b     :  ¯  :           ˇˇˇˇ        5ûöò;¯	   	   
+                        ∂   A                              #     à   à   6    Qà   à   à   à   7D   Ê   QÇ   Ê   8Qà   à   7?ö   A,  R  6   QT ∏   
+T : U QT ∏   
+T : >7U QT ?6   QT T 6   QT 5   ∏   
+T T Á QôPHh`–PHh`ÏXH÷H` PHh`ÕH`WHÕH`…PHh` PHh`ÃPHh`’H`T`     5ûå!´!ç!´!       C                 
+       Q  —
+  I  —
+       ç!´!å!´!ˇˇˇˇ                      !            å!´!å!´!"    å!´!ç!´!       #   c  :   B                  h  	  `  	       ç!´!å!´!ˇˇˇˇ                öò;¯   [   \   ]   2                                      T  5    â   Qà   ∏   
+:  â   QT  5   â   QôPHh`ŒPHh`ÃH `…PHh`ŒPH`       ˇˇˇˇ    5ûå!´!ç!´!        C  A   $                  E	  K
+  =	  K
+       ç!´!å!´!ˇˇˇˇ   ^            öò;¯      *   _   `   a   :   ;   r   -                                   ö    ù    =   =   à   ?7Á Qö    ù    =   =   à   Á Qö    ù    =   =   à   Á Qö    ù    =   =   Á QôXCHh`€H`THh`ŸH`THh`ŸH`THh`‘H`TH`        ˇˇˇˇ    5ûç!´!à!´!       $            öò;¯      %   &   '   (   )   *   +      ,   -   .   /   0   1   2      3   4   5   6   7   8   9   :   ;   ã  º                    
+       H     9 @â   Qö    ù    =   =   =   Á Qö   5   W   Qö    ù    =   =   V   Á Qö   ∏	   
+=
+   ö   5   : ◊ˇEX   Ê   Qö   ∏	   
+=   ö   5   : ◊ˇE,   Ê   Qö   ∏	   
+=   ö   5   : ◊ˇÊ      Ê   =   W  Q√   Ê   ö   ∏	   
+=
+   ö   5   : ◊ˇE,   Ê#   Qö   ∏	   
+=   ö   5   : ◊ˇÊ)      Ê*   =   W  QS   Ê*   ö   ∏	   
+=
+   ö   5   : ◊ˇ   Ê1   =
+   W  Q   Ê1   =   W  QÊ1   ö    ù    =   =   V  Á QÜö   5   5   ∏   
+†   : â   Qà   ?7X   Ê;   ö   ∏   
+=   à   ?7Ç   : W  Qö   ∏   
+V  : ∏   
+Ç   Á Q"   ÊF   ö    ù    =   =   Á QÊH      ÊH   òvéã  Qã  Q… ÊH   ôXPPPPHh`WX Hh`ŸH`\#Hh`œPHh`ÿH`\(Hh`€H`ÏH7`ÏH9`’PHh`‘PHh`€H`ÏH7`’PHh`‘PHh`€H`–PHh`‘PPHh`œX2Hh`ÿH`\5@Ä  ¶QHh`€H!`…PHh`—X:Hh`ﬁH`»XAHh`–H`œH	`ŒXHPHh`‘H`÷XKH“XO`       x     ˇˇˇˇ        ∆  ™    5ûå!´!ç!´!       C   [                     Ü    ~         ç!´!å!´!ˇˇˇˇ               öò;¯      <   =   >   ;                                  	      ö    ù    =   : ∏   
+Á  Qö    ù    =   : ∏   
+Á  QôX]Hh`œH` H`THh`œH` H/`\``      ˇˇˇˇ    5ûå!´!ç!´!           C  g   #                 “  â     â       ç!´!å!´!ˇˇˇˇ   ?   @   A   B   C   D   E             öò;¯   (   .   F   /      G   H   I      3   J   K   L   4   M   N   O   P   Q   R   S   T   U   V   W   X   Y   Z   ÷  ï                             6     ( ö    5   ∏   
+=   : E,   Ê   Qö   ù   =   : ∏   
+=   : Ê
+      Ê   CW   Q   Ê   BW   QÊ   ö   5	   5
+   ∏   
+=   : ◊ˇW  Qö   5	   5   W  Qö   ù   =   : ∏   
+=   : W  Q÷   ö   ù   =   : ∏   
+=   : õ   QV   E!   Ê   QV  E   Ê    Qö   BÊ"   Ñ   Ê#   V  ∏   
+=   : ∏   
+:  ∏   
+=   : >7W  Q=   V  =   W  Qö   ù   =   : ∏   
+=   V  =   Á Q,   Ê2   ö   ù   =   : ∏   
+=   Á QÊ6   ôPXkHh`÷H`›H`œHT`“PHh`–PPHh`ÀXrHh`€H `ÀPHh`‘XvHh`œH`œHD`»XyHh`‘H`œH'`…XÄ  ÉHh`ÙPHh`–H` H`œH` PHh`’PHh`œH`⁄H+`ŒPPHh`œH`œH+`…PP`       ˇˇˇˇ    5ûå!´!ç!´!       C   ê                        !  ˜  !       ç!´!å!´!ˇˇˇˇ               öò;¯                                              ö    ù    Á  QôPHh`ŒP`        ˇˇˇˇ    5ûå!´!ç!´!       C    ù                    ‘  W$  Ã  W$       ç!´!å!´!ˇˇˇˇ   b   c             å!´!ç!´!       B    í  ˇ  í  ß   6       ˇˇˇˇ        5ûå!´!ç!´!       B  ı  ì   Ì  ì   ≠   6       ˇˇˇˇ        5ûå!´!ç!´!       B  !  S$  !  S$  ¿   F       ˇˇˇˇ        5ûöò;¯      d   e   f   g   h   i   j   k      l   m   n   o   p     r                                    ö    ù    =   : ∏   
+:  ∏   
+=   : W   Qö    ù    =   : ∏   
+:  ∏   
+=   : W  QV   ∏   
+=   Á QV  ∏   
+=   Á Qö    ù    ö	   : ∏
+   
+=   =   Ç   Á Qö    ù    ö	   : ∏
+   
+=   =   Ç   Á Qö    ù    ö	   : ∏
+   
+=   =   Ç   Á QôPPHh`œH` H%`œH`»PHh`œH` H%`œH`»PPPHh`–H`THh`–H`TPPHh`œH`ŸH`\Ä  ≠Hh`œH`ŸH`\Ä  ¿Hh`œH`ŸH`\Ä   `   5ûöò;¯
+                                  ∆   U                                   Å    Ç   ö   ö   =   =   =   Á Qö   ù   ö   : ∏   
+Ç   Á Qö   ù   ö   : ∏   
+Ç   Á Q÷    Ç   õ    Qö   ù   ö   : ∏   
+Ç   Á Qö   ù   ö   : ∏   
+=	   Ç   Á Qô]	Hh`^ŸH`\h`œH`œH`\[h`œH`œH`\gMh`ÀXÄ  êh`œH`œH`\Ä  ùh`œH`‘H	`\Ä   H`    %Æ”Ç90      ^hqS^hqSArÒówä®[   p    :https://instructure-uploads-eu.s3.eu-west-1.amazonaws.com/account_118060000000000001/attachments/6742/canvas.js necko:classified 1 strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAAAAgAAAAAAAAAAAAAAAAAAAAEAMwFmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAguMIIIKjCCBxKgAwIBAgIQBquHPEtRIHfZEV3BRSmKtTANBgkqhkiG9w0BAQsFADBkMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMSMwIQYDVQQDExpEaWdpQ2VydCBCYWx0aW1vcmUgQ0EtMiBHMjAeFw0xOTExMDkwMDAwMDBaFw0yMDEyMTAxMjAwMDBaMHYxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpXYXNoaW5ndG9uMRAwDgYDVQQHEwdTZWF0dGxlMRkwFwYDVQQKExBBbWF6b24uY29tLCBJbmMuMSUwIwYDVQQDDBwqLnMzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsUIpazqOTXR2v91KZqyB0djvlTBOuIeWoalRJOX+6EBt/87+7FU/mYmLCc5Rwra/L2xb7V69bXJI0nbY2YZFUHAkoys2i12fPnNtfPJLh0NaBoe9JDfAfQMJrv5B7t+bJYYOt97wCgDiYu+k9daPwj6SVeoBvD4b/C4MCMcUjmjz/hrZbkjqLz1P/ckpsUcH8uK4u+KA9Wjy3S3VqrQxQ+dw5TH3sl17jcvrlwr9rrzKzasr81KbmfxYs9f9kIHUTtCj4TcQwEBiPok9i0SZwGJb+42tcvxFXNTzWCOovA34I1/vWSUmQF4FgQtBPl2XDCSiRxlGK2+2wvlQBdTsiwIDAQABo4IExDCCBMAwHwYDVR0jBBgwFoAUwBKyKHRoRmfpcCV0GgBFWwZ9XEQwHQYDVR0OBBYEFLTboZEmnThC8rZKXbGpfQ9c85T6MIIB6QYDVR0RBIIB4DCCAdyCGnMzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tghwqLnMzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tghpzMy5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbYIcKi5zMy5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbYIkczMuZHVhbHN0YWNrLmV1LXdlc3QtMS5hbWF6b25hd3MuY29tgiYqLnMzLmR1YWxzdGFjay5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbYISKi5zMy5hbWF6b25hd3MuY29tgiQqLnMzLWNvbnRyb2wuZXUtd2VzdC0xLmFtYXpvbmF3cy5jb22CInMzLWNvbnRyb2wuZXUtd2VzdC0xLmFtYXpvbmF3cy5jb22CLiouczMtY29udHJvbC5kdWFsc3RhY2suZXUtd2VzdC0xLmFtYXpvbmF3cy5jb22CLHMzLWNvbnRyb2wuZHVhbHN0YWNrLmV1LXdlc3QtMS5hbWF6b25hd3MuY29tgigqLnMzLWFjY2Vzc3BvaW50LmV1LXdlc3QtMS5hbWF6b25hd3MuY29tgjIqLnMzLWFjY2Vzc3BvaW50LmR1YWxzdGFjay5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMIGBBgNVHR8EejB4MDqgOKA2hjRodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vRGlnaUNlcnRCYWx0aW1vcmVDQS0yRzIuY3JsMDqgOKA2hjRodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRCYWx0aW1vcmVDQS0yRzIuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAEBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQICMHkGCCsGAQUFBwEBBG0wazAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEMGCCsGAQUFBzAChjdodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRCYWx0aW1vcmVDQS0yRzIuY3J0MAwGA1UdEwEB/wQCMAAwggEFBgorBgEEAdZ5AgQCBIH2BIHzAPEAdwC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7RhQAAAW5NhNy0AAAEAwBIMEYCIQCF5eGH/z9TXJaxYfK9HBqC+F3FDTz3k27nixMnogBsBgIhAJqKqYW/rUTNhDzXOc2bu9ZeCocK3Pc5K46V5ZvT+TBCAHYAXqdz+d9WwOe1Nkh90EngMnqRmgyEoRIShBh1loFxRVgAAAFuTYTcJwAABAMARzBFAiAhQLtuSu2xjWotD704phd+CELo7YITxWgMdLJanyEU+QIhALkRbsxS1Ihz2ts4vRupxl8PKelNPRBKjeKdWxJFDvtNMA0GCSqGSIb3DQEBCwUAA4IBAQCB3KtGqdcUwvu7HnTnFHV1wAwrYBGM0fzWmDLiaVgTJRf1ULgpOABRZGhVptHPFNAuzhZqmiu3udMt5JJXHvZMOPZTz0yDggB/m2tmorlrqNDengy2hrxXX2gK+xk8V9ZQ3w7TRWb0iatmwBpikYx1/GyPmbH7NesAizJFMdLehaqmA2gOqCaVtc5X6PM6U0hluLMjIuYAgdubIz4evhkVZ2SeAWhLTzl0igs0evsPym7tQNkeuzmhca3ro0ni/Vu3elDZ90IKbwIWhVXWvc/epfvyF5EzLI/ExPzB7Pc1anPMF2PXMr+vgG4zUao+3VDnUkagBtKgySLWQjCWwOowwC8AAwAAAAABAQAAAAAAAARQMjU2AAAAEFJTQS1QS0NTMS1TSEEyNTYAA2YKMiaRXE/7uyCJhaYy3wW9w5eaVCJM1YWJaWtuluqDAAAAAAAACC4wgggqMIIHEqADAgECAhAGq4c8S1Egd9kRXcFFKYq1MA0GCSqGSIb3DQEBCwUAMGQxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xIzAhBgNVBAMTGkRpZ2lDZXJ0IEJhbHRpbW9yZSBDQS0yIEcyMB4XDTE5MTEwOTAwMDAwMFoXDTIwMTIxMDEyMDAwMFowdjELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24xEDAOBgNVBAcTB1NlYXR0bGUxGTAXBgNVBAoTEEFtYXpvbi5jb20sIEluYy4xJTAjBgNVBAMMHCouczMtZXUtd2VzdC0xLmFtYXpvbmF3cy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCxQilrOo5NdHa/3UpmrIHR2O+VME64h5ahqVEk5f7oQG3/zv7sVT+ZiYsJzlHCtr8vbFvtXr1tckjSdtjZhkVQcCSjKzaLXZ8+c2188kuHQ1oGh70kN8B9Awmu/kHu35slhg633vAKAOJi76T11o/CPpJV6gG8Phv8LgwIxxSOaPP+GtluSOovPU/9ySmxRwfy4ri74oD1aPLdLdWqtDFD53DlMfeyXXuNy+uXCv2uvMrNqyvzUpuZ/Fiz1/2QgdRO0KPhNxDAQGI+iT2LRJnAYlv7ja1y/EVc1PNYI6i8DfgjX+9ZJSZAXgWBC0E+XZcMJKJHGUYrb7bC+VAF1OyLAgMBAAGjggTEMIIEwDAfBgNVHSMEGDAWgBTAErIodGhGZ+lwJXQaAEVbBn1cRDAdBgNVHQ4EFgQUtNuhkSadOELytkpdsal9D1zzlPowggHpBgNVHREEggHgMIIB3IIaczMtZXUtd2VzdC0xLmFtYXpvbmF3cy5jb22CHCouczMtZXUtd2VzdC0xLmFtYXpvbmF3cy5jb22CGnMzLmV1LXdlc3QtMS5hbWF6b25hd3MuY29tghwqLnMzLmV1LXdlc3QtMS5hbWF6b25hd3MuY29tgiRzMy5kdWFsc3RhY2suZXUtd2VzdC0xLmFtYXpvbmF3cy5jb22CJiouczMuZHVhbHN0YWNrLmV1LXdlc3QtMS5hbWF6b25hd3MuY29tghIqLnMzLmFtYXpvbmF3cy5jb22CJCouczMtY29udHJvbC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbYIiczMtY29udHJvbC5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbYIuKi5zMy1jb250cm9sLmR1YWxzdGFjay5ldS13ZXN0LTEuYW1hem9uYXdzLmNvbYIsczMtY29udHJvbC5kdWFsc3RhY2suZXUtd2VzdC0xLmFtYXpvbmF3cy5jb22CKCouczMtYWNjZXNzcG9pbnQuZXUtd2VzdC0xLmFtYXpvbmF3cy5jb22CMiouczMtYWNjZXNzcG9pbnQuZHVhbHN0YWNrLmV1LXdlc3QtMS5hbWF6b25hd3MuY29tMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwgYEGA1UdHwR6MHgwOqA4oDaGNGh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEJhbHRpbW9yZUNBLTJHMi5jcmwwOqA4oDaGNGh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9E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 request-method GET response-head HTTP/1.1 200 OK
+x-amz-id-2: 4yudVIO/aERzMqx0b9GNqzkMDoq1oB4ZFU+9YLVO4ZFfPsAkE+3g2Trn9ytfJkR07l5NnBMEVJ0=
+x-amz-request-id: 18AE82905AC2C8E9
+Date: Tue, 10 Mar 2020 11:49:07 GMT
+x-amz-replication-status: COMPLETED
+Last-Modified: Sat, 21 Jul 2018 16:22:54 GMT
+ETag: "2a1cc181377a42852b90f2dd969a3c87"
+Cache-Control: Cache-Control:max-age=473354280, public
+Expires: Thu, 21 Jul 2033 16:22:53 GMT
+x-amz-version-id: ZZUL5CGSqQA7TRKsAICmuho1nIWX5lpg
+Accept-Ranges: bytes
+Content-Type: application/javascript
+Content-Length: 9305
+Server: AmazonS3
+ original-response-headers x-amz-id-2: 4yudVIO/aERzMqx0b9GNqzkMDoq1oB4ZFU+9YLVO4ZFfPsAkE+3g2Trn9ytfJkR07l5NnBMEVJ0=
+x-amz-request-id: 18AE82905AC2C8E9
+Date: Tue, 10 Mar 2020 11:49:07 GMT
+x-amz-replication-status: COMPLETED
+Last-Modified: Sat, 21 Jul 2018 16:22:54 GMT
+ETag: "2a1cc181377a42852b90f2dd969a3c87"
+Cache-Control: Cache-Control:max-age=473354280, public
+Expires: Thu, 21 Jul 2033 16:22:53 GMT
+x-amz-version-id: ZZUL5CGSqQA7TRKsAICmuho1nIWX5lpg
+Accept-Ranges: bytes
+Content-Type: application/javascript
+Content-Length: 9305
+Server: AmazonS3
+ ctid 2 eTLD1Access 1;0;3938476781, uncompressed-len 0 net-response-time-onstart 220 net-response-time-onstop 221 alt-data 1;9305,javascript/moz-bytecode-20200117190643 alt-data-from-child 1   d0
