@@ -19,7 +19,7 @@ avatars1.githubusercontent.com:HSTS	1	18332	1615461327859,1,0,2
 enterprise.github.com:HSTS	0	18331	1615359910556,1,0,2
 snippets.cdn.mozilla.net:HSTS	0	18332	1615438830310,1,0,2
 inst-fs-dub-prod.inscloudgate.net:HSTS	0	18331	1615377074647,1,0,2
-moringaschool.instructure.com:HSTS	1	18332	1615439664908,1,0,2
+moringaschool.instructure.com:HSTS	1	18332	1615439967148,1,0,2
 people-pa.clients6.google.com:HSTS	1	18332	1594789417707,1,1,2
 ssl.google-analytics.com:HSTS	0	18331	1594710715902,1,1,2
 apis.google.com:HSTS	2	18332	1615438858716,1,0,2
@@ -30,7 +30,7 @@ shavar.services.mozilla.com^firstPartyDomain=safebrowsing.86868755-6b82-4842-b30
 mail.google.com:HSTS	1	18332	1594789257753,1,1,2
 www.google.com:HSTS	2	18332	1615439020094,1,0,2
 collector.githubapp.com:HSTS	1	18332	1615439439101,1,0,2
-chat-pa.clients6.google.com:HSTS	1	18332	1594789369790,1,1,2
+chat-pa.clients6.google.com:HSTS	1	18332	1594790322518,1,1,2
 www.google.com^firstPartyDomain=google.search.suggestions.mozilla:HSTS	1	18331	1615383146118,1,0,2
 avatars3.githubusercontent.com:HSTS	0	18331	1615382661904,1,0,2
 ogs.google.com:HSTS	2	18332	1615438853886,1,0,2
