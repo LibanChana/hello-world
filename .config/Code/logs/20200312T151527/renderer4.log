@@ -1,0 +1,2 @@
+[2020-03-12 15:16:45.643] [renderer4] [warning] UNRESPONSIVE extension host, 'ritwickdey.LiveServer' took 100% of 10509.394ms, saved PROFILE here: '/tmp/exthost-560244.cpuprofile' [{"id":"gc","total":8007,"percentage":0},{"id":"ritwickdey.LiveServer","total":10501089,"percentage":100}]
+[2020-03-12 16:54:43.194] [renderer4] [warning] UNRESPONSIVE extension host, 'vscode.css-language-features' took 100% of 8929.835ms, saved PROFILE here: '/tmp/exthost-d0bd8e.cpuprofile' [{"id":"vscode.css-language-features","total":8929453,"percentage":100}]

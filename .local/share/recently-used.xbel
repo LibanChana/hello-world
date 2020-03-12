@@ -13,4 +13,87 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="file:///home/liban/Documents/moringa-school-projects/hello-world/hello-world.html" added="2020-03-12T04:19:00Z" modified="2020-03-12T04:19:00Z" visited="2020-03-12T04:19:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-12T04:19:00Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html" added="2020-03-12T04:22:05Z" modified="2020-03-12T04:22:05Z" visited="2020-03-12T04:22:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-12T04:22:05Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liban/document/moringa-school-projects/cookie-recipe/FILE-1547029181.jpg" added="2020-03-12T07:26:43Z" modified="2020-03-12T07:26:45Z" visited="2020-03-12T07:26:43Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-03-12T07:26:45Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/elephant.jpg" added="2020-03-12T07:28:40Z" modified="2020-03-12T07:28:41Z" visited="2020-03-12T07:28:40Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-03-12T07:28:41Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/movies.jpeg" added="2020-03-12T07:45:10Z" modified="2020-03-12T07:45:11Z" visited="2020-03-12T07:45:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-03-12T07:45:11Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liban/Downloads/google-chrome-stable_current_amd64.deb" added="2020-03-12T09:50:26Z" modified="2020-03-12T09:50:26Z" visited="2020-03-12T09:50:26Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.debian.binary-package"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-03-12T09:50:26Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liban/Downloads/google-chrome-stable_current_amd64(1).deb" added="2020-03-12T09:51:41Z" modified="2020-03-12T09:51:41Z" visited="2020-03-12T09:51:41Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.debian.binary-package"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-03-12T09:51:41Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liban/Documents/branching-test-project/css/style.css" added="2020-03-12T13:23:04Z" modified="2020-03-12T13:23:04Z" visited="2020-03-12T13:23:05.046752Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/css"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-03-12T13:23:04Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>

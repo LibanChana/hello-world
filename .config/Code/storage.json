@@ -2,23 +2,66 @@
     "telemetry.machineId": "15e3b808437c5d492390e747d708249d0624e11704cdc6b9a8deefea51da3927",
     "openedPathsList": {
         "workspaces3": [
-            "file:///home/liban/Documents/moringa-school-projects/hello-world"
+            "file:///home/liban/Documents/branching-test-project",
+            "file:///home/liban",
+            "file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/css",
+            "file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website",
+            "file:///home/liban/document/moringa-school-projects",
+            "file:///home/liban/Documents/moringa-school-projects/hello-world",
+            "file:///home/liban/document/moringa-school-projects/hello-world"
         ],
-        "files2": []
+        "files2": [
+            "file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html",
+            "file:///home/liban/Documents/moringa-school-projects/hello-world/hello-world.html"
+        ]
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/liban/Documents/moringa-school-projects/hello-world",
-            "backupPath": "/home/liban/.config/Code/Backups/bbe8cfc46f03e99ee00791b27c6259e2",
+            "folder": "file:///home/liban/Documents/branching-test-project",
+            "backupPath": "/home/liban/.config/Code/Backups/d6c14bb6257040ca09d106a04b9bc1d3",
             "uiState": {
-                "mode": 1,
-                "x": 171,
+                "mode": 0,
+                "x": 201,
                 "y": 57,
                 "width": 1024,
                 "height": 711
             }
         },
-        "openedWindows": []
+        "openedWindows": [
+            {
+                "folder": "file:///home/liban",
+                "backupPath": "/home/liban/.config/Code/Backups/50ee032c17c195f75a1cf47a967a4957",
+                "uiState": {
+                    "mode": 0,
+                    "x": 171,
+                    "y": 57,
+                    "width": 1024,
+                    "height": 711
+                }
+            },
+            {
+                "folder": "file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website",
+                "backupPath": "/home/liban/.config/Code/Backups/9b3b7c514586a0564e4174527d5faee2",
+                "uiState": {
+                    "mode": 1,
+                    "x": 171,
+                    "y": 57,
+                    "width": 1024,
+                    "height": 711
+                }
+            },
+            {
+                "folder": "file:///home/liban/Documents/branching-test-project",
+                "backupPath": "/home/liban/.config/Code/Backups/d6c14bb6257040ca09d106a04b9bc1d3",
+                "uiState": {
+                    "mode": 0,
+                    "x": 201,
+                    "y": 57,
+                    "width": 1024,
+                    "height": 711
+                }
+            }
+        ]
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -64,13 +107,104 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/liban/Documents/moringa-school-projects/hello-world",
+                                        "fsPath": "/home/liban/Documents/branching-test-project",
+                                        "external": "file:///home/liban/Documents/branching-test-project",
+                                        "path": "/home/liban/Documents/branching-test-project",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/branching-test-project"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/liban",
+                                        "path": "/home/liban",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/home/liban"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/css",
+                                        "path": "/home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/css",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/document/moringa-school-projects/cookie-recipe/my-first-website/css"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website",
+                                        "path": "/home/liban/document/moringa-school-projects/cookie-recipe/my-first-website",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/document/moringa-school-projects/cookie-recipe/my-first-website"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/liban/document/moringa-school-projects",
+                                        "path": "/home/liban/document/moringa-school-projects",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/document/moringa-school-projects"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/liban/Documents/moringa-school-projects/hello-world",
                                         "path": "/home/liban/Documents/moringa-school-projects/hello-world",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/moringa-school-projects/hello-world"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/liban/document/moringa-school-projects/hello-world",
+                                        "path": "/home/liban/document/moringa-school-projects/hello-world",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/document/moringa-school-projects/hello-world"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html",
+                                        "path": "/home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/liban/Documents/moringa-school-projects/hello-world/hello-world.html",
+                                        "path": "/home/liban/Documents/moringa-school-projects/hello-world/hello-world.html",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/moringa-school-projects/hello-world/hello-world.html"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -580,8 +714,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1462,5 +1595,6 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#1e1e1e"
+    "themeBackground": "#1e1e1e",
+    "pickerWorkingDir": "/home/liban/document/moringa-school-projects/cookie-recipe/my-first-website"
 }

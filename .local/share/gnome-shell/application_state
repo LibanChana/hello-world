@@ -1,15 +1,21 @@
 <?xml version="1.0"?>
 <application-state>
   <context id="">
+    <application id="slack_slack.desktop" open-window-count="0" score="162" last-seen="1583936706"/>
     <application id="gnome-control-center.desktop" open-window-count="0" score="179" last-seen="1583840750"/>
     <application id="yelp.desktop" open-window-count="0" score="349" last-seen="1583832596"/>
-    <application id="firefox.desktop" open-window-count="2" score="1359" last-seen="1583903529"/>
-    <application id="org.gnome.Nautilus.desktop" open-window-count="0" score="426" last-seen="1583903754"/>
+    <application id="firefox.desktop" open-window-count="1" score="2908" last-seen="1584015038"/>
+    <application id="gedit.desktop" open-window-count="0" score="0" last-seen="0"/>
+    <application id="org.gnome.Nautilus.desktop" open-window-count="1" score="545" last-seen="1584023016"/>
     <application id="update-manager.desktop" open-window-count="0" score="0" last-seen="1583821112"/>
     <application id="software-properties-gtk.desktop" open-window-count="0" score="5" last-seen="1583840300"/>
-    <application id="nautilus-folder-handler.desktop" open-window-count="0" score="0" last-seen="0"/>
-    <application id="code_code.desktop" open-window-count="0" score="497" last-seen="1583852169"/>
-    <application id="org.gnome.Terminal.desktop" open-window-count="1" score="1379" last-seen="1583903691"/>
-    <application id="org.gnome.Software.desktop" open-window-count="0" score="71" last-seen="1583903687"/>
+    <application id="google-chrome.desktop" open-window-count="1" score="295" last-seen="1584023031"/>
+    <application id="rhythmbox.desktop" open-window-count="1" score="5" last-seen="1584018777"/>
+    <application id="org.gnome.gedit.desktop" open-window-count="1" score="1" last-seen="1584019393"/>
+    <application id="code_code.desktop" open-window-count="3" score="2723" last-seen="1584021877"/>
+    <application id="org.gnome.Terminal.desktop" open-window-count="1" score="5062" last-seen="1584023000"/>
+    <application id="gnome-software-local-file.desktop" open-window-count="0" score="0" last-seen="0"/>
+    <application id="apport-gtk.desktop" open-window-count="1" score="0" last-seen="1584022792"/>
+    <application id="org.gnome.Software.desktop" open-window-count="1" score="678" last-seen="1584011481"/>
   </context>
 </application-state>

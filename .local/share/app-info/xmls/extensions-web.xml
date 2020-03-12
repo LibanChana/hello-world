@@ -401,7 +401,7 @@
     <url type="homepage">https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/</url>
     <screenshots>
       <screenshot type="default">
-        <image type="source">https://extensions.gnome.org/extension-data/screenshots/screenshot_1262_Dspl8C2.png</image>
+        <image type="source">https://extensions.gnome.org/extension-data/screenshots/screenshot_1262_pHSrPhV.png</image>
       </screenshot>
     </screenshots>
     <releases>
@@ -11336,6 +11336,9 @@
         <image type="source">https://extensions.gnome.org/extension-data/screenshots/screenshot_1367.png</image>
       </screenshot>
     </screenshots>
+    <releases>
+      <release version="2"/>
+    </releases>
     <metadata>
       <value key="GnomeSoftware::OriginHostnameUrl">https://extensions.gnome.org/</value>
       <value key="GnomeSoftware::Plugin">shell-extensions</value>
@@ -12877,7 +12880,7 @@
       </screenshot>
     </screenshots>
     <releases>
-      <release version="32"/>
+      <release version="35"/>
     </releases>
     <metadata>
       <value key="GnomeSoftware::OriginHostnameUrl">https://extensions.gnome.org/</value>
@@ -14186,7 +14189,7 @@
     <id>new-mail-indicator_fthx</id>
     <name>New Mail Indicator</name>
     <summary>GNOME Shell Extension</summary>
-    <description><p>An icon beside the date in the topbar to show if there are unread emails when running your email client.</p><p> It checks the notifications in the message tray related to a new mail, no extra configuration needed, very light extension. Do not disable the notifications of your default email client !</p><p> *** It is not a standalone mail checker, you need your email client to be running. *** Please check that the xdg-utils package is installed.</p><p>  Email clients supported at the moment are : Thunderbird, Evolution, Geary, Mailspring. Please ask here to add the client you need. If you report an error, please provide at least the distro &amp; the email client you use.</p><p> Some easy ways are given in the extension.js code if you want to change read/unread icons.</p><p> Includes some code from https://extensions.gnome.org/extension/1386/notification-counter/ .</p></description>
+    <description><p>An icon beside the date in the topbar to show if there are unread emails when running your email client.</p><p> It checks the notifications in the message tray related to a new mail, no extra configuration needed, very light extension. Do not disable the notifications of your default email client !</p><p> *** It is not a standalone mail checker, you need your email client to be running. *** Please check that the xdg-utils package is installed.</p><p>  Email clients supported at the moment are : Thunderbird, Evolution, Geary, Mailspring. Please ask here to add the client you need. If you report an error, please provide at least the distro &amp;amp; the email client you use.</p><p> Includes some code from https://extensions.gnome.org/extension/1386/notification-counter/ .</p></description>
     <icon type="stock">application-x-addon-symbolic</icon>
     <categories>
       <category>Addon</category>

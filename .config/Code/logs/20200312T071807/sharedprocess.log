@@ -1,0 +1,8 @@
+[2020-03-12 07:18:13.903] [sharedprocess] [info] main {"machineId":"15e3b808437c5d492390e747d708249d0624e11704cdc6b9a8deefea51da3927","windowId":2}
+[2020-03-12 07:18:53.940] [sharedprocess] [info] Starting to clean up unused language packs.
+[2020-03-12 11:46:10.080] [sharedprocess] [info] Installing extension: ritwickdey.liveserver
+[2020-03-12 11:46:16.582] [sharedprocess] [info] Downloaded extension: ritwickdey.liveserver /tmp/a7854a1d-361f-4ada-9c80-ab799bf2b3e2
+[2020-03-12 11:46:23.503] [sharedprocess] [info] Extracted extension to /home/liban/.vscode/extensions/.ritwickdey.liveserver-5.6.1: ritwickdey.liveserver
+[2020-03-12 11:46:23.548] [sharedprocess] [info] Renamed to /home/liban/.vscode/extensions/ritwickdey.liveserver-5.6.1
+[2020-03-12 11:46:23.575] [sharedprocess] [info] Installation completed. ritwickdey.liveserver
+[2020-03-12 11:46:23.843] [sharedprocess] [info] Extensions installed successfully: ritwickdey.liveserver

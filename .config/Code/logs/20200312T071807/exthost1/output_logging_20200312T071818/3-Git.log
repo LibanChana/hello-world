@@ -1,0 +1,34 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/liban
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :Documents/moringa-school-projects/hello-world/hello-world.html
+> git ls-files --stage -- /home/liban/Documents/moringa-school-projects/hello-world/hello-world.html
+> git show :document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html
+> git ls-files --stage -- /home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git ls-files --stage -- /home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html
+> git show :document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :Documents/moringa-school-projects/hello-world/hello-world.html
+> git ls-files --stage -- /home/liban/Documents/moringa-school-projects/hello-world/hello-world.html
+> git show :document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html
+> git ls-files --stage -- /home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/my-first-website.html

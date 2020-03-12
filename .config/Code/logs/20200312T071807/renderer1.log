@@ -1,0 +1,3 @@
+[2020-03-12 07:18:21.133] [renderer1] [error] Error: [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-03-12 07:18:21.154] [renderer1] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-03-12 11:52:19.454] [renderer1] [warning] UNRESPONSIVE extension host, 'ritwickdey.LiveServer' took 100% of 29364.791ms, saved PROFILE here: '/tmp/exthost-194ee1.cpuprofile' [{"id":"gc","total":36496,"percentage":0},{"id":"ritwickdey.LiveServer","total":29327877,"percentage":100}]

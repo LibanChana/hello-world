@@ -1,610 +1,654 @@
-[    34.062] (--) Log file renamed from "/home/liban/.local/share/xorg/Xorg.pid-935.log" to "/home/liban/.local/share/xorg/Xorg.0.log"
-[    34.065] 
+[    43.438] (--) Log file renamed from "/home/liban/.local/share/xorg/Xorg.pid-943.log" to "/home/liban/.local/share/xorg/Xorg.0.log"
+[    43.439] 
 X.Org X Server 1.20.5
 X Protocol Version 11, Revision 0
-[    34.065] Build Operating System: Linux 4.4.0-170-generic x86_64 Ubuntu
-[    34.065] Current Operating System: Linux liban-Lenovo-B50-70 5.3.0-28-generic #30~18.04.1-Ubuntu SMP Fri Jan 17 06:14:09 UTC 2020 x86_64
-[    34.065] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.3.0-28-generic root=UUID=44730275-6ab4-481d-8f1b-2b59364f04c2 ro quiet splash vt.handoff=1
-[    34.065] Build Date: 18 December 2019  08:15:29AM
-[    34.065] xorg-server-hwe-18.04 2:1.20.5+git20191008-0ubuntu1~18.04.1 (For technical support please see http://www.ubuntu.com/support) 
-[    34.065] Current version of pixman: 0.34.0
-[    34.065] 	Before reporting problems, check http://wiki.x.org
+[    43.439] Build Operating System: Linux 4.4.0-170-generic x86_64 Ubuntu
+[    43.439] Current Operating System: Linux liban-Lenovo-B50-70 5.3.0-28-generic #30~18.04.1-Ubuntu SMP Fri Jan 17 06:14:09 UTC 2020 x86_64
+[    43.439] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.3.0-28-generic root=UUID=44730275-6ab4-481d-8f1b-2b59364f04c2 ro quiet splash vt.handoff=1
+[    43.439] Build Date: 18 December 2019  08:15:29AM
+[    43.439] xorg-server-hwe-18.04 2:1.20.5+git20191008-0ubuntu1~18.04.1 (For technical support please see http://www.ubuntu.com/support) 
+[    43.439] Current version of pixman: 0.34.0
+[    43.439] 	Before reporting problems, check http://wiki.x.org
 	to make sure that you have the latest version.
-[    34.065] Markers: (--) probed, (**) from config file, (==) default setting,
+[    43.439] Markers: (--) probed, (**) from config file, (==) default setting,
 	(++) from command line, (!!) notice, (II) informational,
 	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
-[    34.065] (==) Log file: "/home/liban/.local/share/xorg/Xorg.0.log", Time: Tue Mar 10 14:43:35 2020
-[    34.120] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
-[    34.148] (==) No Layout section.  Using the first Screen section.
-[    34.148] (==) No screen section available. Using defaults.
-[    34.148] (**) |-->Screen "Default Screen Section" (0)
-[    34.148] (**) |   |-->Monitor "<default monitor>"
-[    34.150] (==) No monitor specified for screen "Default Screen Section".
+[    43.440] (==) Log file: "/home/liban/.local/share/xorg/Xorg.0.log", Time: Thu Mar 12 07:06:50 2020
+[    43.473] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[    43.501] (==) No Layout section.  Using the first Screen section.
+[    43.501] (==) No screen section available. Using defaults.
+[    43.501] (**) |-->Screen "Default Screen Section" (0)
+[    43.501] (**) |   |-->Monitor "<default monitor>"
+[    43.503] (==) No monitor specified for screen "Default Screen Section".
 	Using a default monitor configuration.
-[    34.150] (==) Automatically adding devices
-[    34.150] (==) Automatically enabling devices
-[    34.150] (==) Automatically adding GPU devices
-[    34.150] (==) Automatically binding GPU devices
-[    34.150] (==) Max clients allowed: 256, resource mask: 0x1fffff
-[    34.150] (WW) The directory "/usr/share/fonts/X11/cyrillic" does not exist.
-[    34.150] 	Entry deleted from font path.
-[    34.150] (WW) The directory "/usr/share/fonts/X11/100dpi/" does not exist.
-[    34.150] 	Entry deleted from font path.
-[    34.150] (WW) The directory "/usr/share/fonts/X11/75dpi/" does not exist.
-[    34.150] 	Entry deleted from font path.
-[    34.150] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
-[    34.150] 	Entry deleted from font path.
-[    34.151] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
-[    34.151] 	Entry deleted from font path.
-[    34.151] (==) FontPath set to:
+[    43.503] (==) Automatically adding devices
+[    43.503] (==) Automatically enabling devices
+[    43.503] (==) Automatically adding GPU devices
+[    43.503] (==) Automatically binding GPU devices
+[    43.503] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[    43.503] (WW) The directory "/usr/share/fonts/X11/cyrillic" does not exist.
+[    43.503] 	Entry deleted from font path.
+[    43.503] (WW) The directory "/usr/share/fonts/X11/100dpi/" does not exist.
+[    43.503] 	Entry deleted from font path.
+[    43.503] (WW) The directory "/usr/share/fonts/X11/75dpi/" does not exist.
+[    43.503] 	Entry deleted from font path.
+[    43.503] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
+[    43.503] 	Entry deleted from font path.
+[    43.503] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
+[    43.503] 	Entry deleted from font path.
+[    43.503] (==) FontPath set to:
 	/usr/share/fonts/X11/misc,
 	/usr/share/fonts/X11/Type1,
 	built-ins
-[    34.151] (==) ModulePath set to "/usr/lib/xorg/modules"
-[    34.151] (II) The server relies on udev to provide the list of input devices.
+[    43.503] (==) ModulePath set to "/usr/lib/xorg/modules"
+[    43.503] (II) The server relies on udev to provide the list of input devices.
 	If no devices become available, reconfigure udev or disable AutoAddDevices.
-[    34.151] (II) Loader magic: 0x55f9db6f0020
-[    34.151] (II) Module ABI versions:
-[    34.151] 	X.Org ANSI C Emulation: 0.4
-[    34.151] 	X.Org Video Driver: 24.0
-[    34.151] 	X.Org XInput driver : 24.1
-[    34.151] 	X.Org Server Extension : 10.0
-[    34.153] (++) using VT number 1
+[    43.503] (II) Loader magic: 0x55de6f6ee020
+[    43.503] (II) Module ABI versions:
+[    43.503] 	X.Org ANSI C Emulation: 0.4
+[    43.503] 	X.Org Video Driver: 24.0
+[    43.503] 	X.Org XInput driver : 24.1
+[    43.503] 	X.Org Server Extension : 10.0
+[    43.504] (++) using VT number 1
 
-[    34.158] (II) systemd-logind: took control of session /org/freedesktop/login1/session/_31
-[    34.160] (II) xfree86: Adding drm device (/dev/dri/card0)
-[    34.161] (II) systemd-logind: got fd for /dev/dri/card0 226:0 fd 12 paused 0
-[    34.165] (--) PCI:*(0@0:2:0) 8086:0a16:17aa:3978 rev 11, Mem @ 0x92000000/4194304, 0x80000000/268435456, I/O @ 0x00005000/64, BIOS @ 0x????????/131072
-[    34.165] (II) LoadModule: "glx"
-[    34.166] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
-[    34.306] (II) Module glx: vendor="X.Org Foundation"
-[    34.306] 	compiled for 1.20.5, module version = 1.0.0
-[    34.306] 	ABI class: X.Org Server Extension, version 10.0
-[    34.306] (==) Matched modesetting as autoconfigured driver 0
-[    34.306] (==) Matched fbdev as autoconfigured driver 1
-[    34.306] (==) Matched vesa as autoconfigured driver 2
-[    34.306] (==) Assigned the driver to the xf86ConfigLayout
-[    34.306] (II) LoadModule: "modesetting"
-[    34.307] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
-[    34.388] (II) Module modesetting: vendor="X.Org Foundation"
-[    34.389] 	compiled for 1.20.5, module version = 1.20.5
-[    34.389] 	Module class: X.Org Video Driver
-[    34.389] 	ABI class: X.Org Video Driver, version 24.0
-[    34.389] (II) LoadModule: "fbdev"
-[    34.389] (II) Loading /usr/lib/xorg/modules/drivers/fbdev_drv.so
-[    34.408] (II) Module fbdev: vendor="X.Org Foundation"
-[    34.408] 	compiled for 1.20.1, module version = 0.5.0
-[    34.408] 	Module class: X.Org Video Driver
-[    34.408] 	ABI class: X.Org Video Driver, version 24.0
-[    34.408] (II) LoadModule: "vesa"
-[    34.408] (II) Loading /usr/lib/xorg/modules/drivers/vesa_drv.so
-[    34.434] (II) Module vesa: vendor="X.Org Foundation"
-[    34.434] 	compiled for 1.20.1, module version = 2.4.0
-[    34.434] 	Module class: X.Org Video Driver
-[    34.434] 	ABI class: X.Org Video Driver, version 24.0
-[    34.434] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
-[    34.434] (II) FBDEV: driver for framebuffer: fbdev
-[    34.434] (II) VESA: driver for VESA chipsets: vesa
-[    34.435] xf86EnableIOPorts: failed to set IOPL for I/O (Operation not permitted)
-[    34.435] (II) modeset(0): using drv /dev/dri/card0
-[    34.435] (WW) Falling back to old probe method for fbdev
-[    34.435] (II) Loading sub module "fbdevhw"
-[    34.435] (II) LoadModule: "fbdevhw"
-[    34.435] (II) Loading /usr/lib/xorg/modules/libfbdevhw.so
-[    34.447] (II) Module fbdevhw: vendor="X.Org Foundation"
-[    34.447] 	compiled for 1.20.5, module version = 0.0.2
-[    34.447] 	ABI class: X.Org Video Driver, version 24.0
-[    34.447] (EE) open /dev/fb0: Permission denied
-[    34.447] (WW) VGA arbiter: cannot open kernel arbiter, no multi-card support
-[    34.447] (II) modeset(0): Creating default Display subsection in Screen section
+[    43.506] (II) systemd-logind: took control of session /org/freedesktop/login1/session/_31
+[    43.508] (II) xfree86: Adding drm device (/dev/dri/card0)
+[    43.509] (II) systemd-logind: got fd for /dev/dri/card0 226:0 fd 12 paused 0
+[    43.514] (--) PCI:*(0@0:2:0) 8086:0a16:17aa:3978 rev 11, Mem @ 0x92000000/4194304, 0x80000000/268435456, I/O @ 0x00005000/64, BIOS @ 0x????????/131072
+[    43.514] (II) LoadModule: "glx"
+[    43.514] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[    43.663] (II) Module glx: vendor="X.Org Foundation"
+[    43.663] 	compiled for 1.20.5, module version = 1.0.0
+[    43.663] 	ABI class: X.Org Server Extension, version 10.0
+[    43.663] (==) Matched modesetting as autoconfigured driver 0
+[    43.663] (==) Matched fbdev as autoconfigured driver 1
+[    43.663] (==) Matched vesa as autoconfigured driver 2
+[    43.663] (==) Assigned the driver to the xf86ConfigLayout
+[    43.663] (II) LoadModule: "modesetting"
+[    43.664] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
+[    43.787] (II) Module modesetting: vendor="X.Org Foundation"
+[    43.787] 	compiled for 1.20.5, module version = 1.20.5
+[    43.787] 	Module class: X.Org Video Driver
+[    43.787] 	ABI class: X.Org Video Driver, version 24.0
+[    43.787] (II) LoadModule: "fbdev"
+[    43.788] (II) Loading /usr/lib/xorg/modules/drivers/fbdev_drv.so
+[    43.827] (II) Module fbdev: vendor="X.Org Foundation"
+[    43.828] 	compiled for 1.20.1, module version = 0.5.0
+[    43.828] 	Module class: X.Org Video Driver
+[    43.828] 	ABI class: X.Org Video Driver, version 24.0
+[    43.828] (II) LoadModule: "vesa"
+[    43.828] (II) Loading /usr/lib/xorg/modules/drivers/vesa_drv.so
+[    43.887] (II) Module vesa: vendor="X.Org Foundation"
+[    43.887] 	compiled for 1.20.1, module version = 2.4.0
+[    43.887] 	Module class: X.Org Video Driver
+[    43.887] 	ABI class: X.Org Video Driver, version 24.0
+[    43.887] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[    43.887] (II) FBDEV: driver for framebuffer: fbdev
+[    43.887] (II) VESA: driver for VESA chipsets: vesa
+[    43.888] xf86EnableIOPorts: failed to set IOPL for I/O (Operation not permitted)
+[    43.888] (II) modeset(0): using drv /dev/dri/card0
+[    43.888] (WW) Falling back to old probe method for fbdev
+[    43.888] (II) Loading sub module "fbdevhw"
+[    43.888] (II) LoadModule: "fbdevhw"
+[    43.888] (II) Loading /usr/lib/xorg/modules/libfbdevhw.so
+[    43.922] (II) Module fbdevhw: vendor="X.Org Foundation"
+[    43.922] 	compiled for 1.20.5, module version = 0.0.2
+[    43.922] 	ABI class: X.Org Video Driver, version 24.0
+[    43.922] (EE) open /dev/fb0: Permission denied
+[    43.922] (WW) VGA arbiter: cannot open kernel arbiter, no multi-card support
+[    43.923] (II) modeset(0): Creating default Display subsection in Screen section
 	"Default Screen Section" for depth/fbbpp 24/32
-[    34.447] (==) modeset(0): Depth 24, (==) framebuffer bpp 32
-[    34.447] (==) modeset(0): RGB weight 888
-[    34.447] (==) modeset(0): Default visual is TrueColor
-[    34.447] (II) Loading sub module "glamoregl"
-[    34.447] (II) LoadModule: "glamoregl"
-[    34.448] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
-[    34.608] (II) Module glamoregl: vendor="X.Org Foundation"
-[    34.608] 	compiled for 1.20.5, module version = 1.0.1
-[    34.608] 	ABI class: X.Org ANSI C Emulation, version 0.4
-[    35.337] (II) modeset(0): glamor X acceleration enabled on Mesa DRI Intel(R) Haswell Mobile 
-[    35.337] (II) modeset(0): glamor initialized
-[    35.339] (II) modeset(0): Output eDP-1 has no monitor section
-[    35.339] (II) modeset(0): Output DP-1 has no monitor section
-[    35.340] (II) modeset(0): Output HDMI-1 has no monitor section
-[    35.342] (II) modeset(0): EDID for output eDP-1
-[    35.342] (II) modeset(0): Manufacturer: CMN  Model: 15bd  Serial#: 0
-[    35.342] (II) modeset(0): Year: 2013  Week: 30
-[    35.342] (II) modeset(0): EDID Version: 1.4
-[    35.342] (II) modeset(0): Digital Display Input
-[    35.342] (II) modeset(0): 6 bits per channel
-[    35.342] (II) modeset(0): Digital interface is DisplayPort
-[    35.342] (II) modeset(0): Max Image Size [cm]: horiz.: 34  vert.: 19
-[    35.342] (II) modeset(0): Gamma: 2.20
-[    35.342] (II) modeset(0): No DPMS capabilities specified
-[    35.342] (II) modeset(0): Supported color encodings: RGB 4:4:4 
-[    35.342] (II) modeset(0): First detailed timing is preferred mode
-[    35.342] (II) modeset(0): Preferred mode is native pixel format and refresh rate
-[    35.342] (II) modeset(0): redX: 0.573 redY: 0.346   greenX: 0.341 greenY: 0.595
-[    35.342] (II) modeset(0): blueX: 0.161 blueY: 0.115   whiteX: 0.313 whiteY: 0.329
-[    35.342] (II) modeset(0): Manufacturer's mask: 0
-[    35.342] (II) modeset(0): Supported detailed timing:
-[    35.342] (II) modeset(0): clock: 76.4 MHz   Image Size:  344 x 193 mm
-[    35.342] (II) modeset(0): h_active: 1366  h_sync: 1434  h_sync_end 1479 h_blank_end 1592 h_border: 0
-[    35.342] (II) modeset(0): v_active: 768  v_sync: 772  v_sync_end 779 v_blanking: 800 v_border: 0
-[    35.342] (II) modeset(0):  N156BGE-EA1
-[    35.342] (II) modeset(0):  CMN
-[    35.342] (II) modeset(0):  N156BGE-EA1
-[    35.342] (II) modeset(0): EDID (in hex):
-[    35.342] (II) modeset(0): 	00ffffffffffff000daebd1500000000
-[    35.342] (II) modeset(0): 	1e1701049522137802e5659258579829
-[    35.342] (II) modeset(0): 	1d505400000001010101010101010101
-[    35.342] (II) modeset(0): 	010101010101da1d56e250002030442d
-[    35.342] (II) modeset(0): 	470058c110000018000000fe004e3135
-[    35.342] (II) modeset(0): 	364247452d4541310a20000000fe0043
-[    35.342] (II) modeset(0): 	4d4e0a202020202020202020000000fe
-[    35.342] (II) modeset(0): 	004e3135364247452d4541310a200088
-[    35.342] (II) modeset(0): Printing probed modes for output eDP-1
-[    35.342] (II) modeset(0): Modeline "1366x768"x60.0   76.42  1366 1434 1479 1592  768 772 779 800 -hsync -vsync (48.0 kHz eP)
-[    35.342] (II) modeset(0): Modeline "1360x768"x59.8   84.75  1360 1432 1568 1776  768 771 781 798 -hsync +vsync (47.7 kHz d)
-[    35.343] (II) modeset(0): Modeline "1360x768"x60.0   72.00  1360 1408 1440 1520  768 771 781 790 +hsync -vsync (47.4 kHz d)
-[    35.343] (II) modeset(0): Modeline "1280x720"x120.0  156.12  1280 1376 1512 1744  720 721 724 746 doublescan -hsync +vsync (89.5 kHz d)
-[    35.343] (II) modeset(0): Modeline "1280x720"x120.0  120.75  1280 1304 1320 1360  720 721 724 740 doublescan +hsync -vsync (88.8 kHz d)
-[    35.343] (II) modeset(0): Modeline "1280x720"x59.9   74.50  1280 1344 1472 1664  720 723 728 748 -hsync +vsync (44.8 kHz d)
-[    35.343] (II) modeset(0): Modeline "1280x720"x59.7   63.75  1280 1328 1360 1440  720 723 728 741 +hsync -vsync (44.3 kHz d)
-[    35.343] (II) modeset(0): Modeline "1024x768"x120.1  133.47  1024 1100 1212 1400  768 768 770 794 doublescan -hsync +vsync (95.3 kHz d)
-[    35.343] (II) modeset(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz d)
-[    35.343] (II) modeset(0): Modeline "960x720"x120.0  117.00  960 1024 1128 1300  720 720 722 750 doublescan -hsync +vsync (90.0 kHz d)
-[    35.343] (II) modeset(0): Modeline "928x696"x120.1  109.15  928 976 1088 1264  696 696 698 719 doublescan -hsync +vsync (86.4 kHz d)
-[    35.343] (II) modeset(0): Modeline "896x672"x120.0  102.40  896 960 1060 1224  672 672 674 697 doublescan -hsync +vsync (83.7 kHz d)
-[    35.343] (II) modeset(0): Modeline "1024x576"x119.9   98.50  1024 1092 1200 1376  576 577 580 597 doublescan -hsync +vsync (71.6 kHz d)
-[    35.343] (II) modeset(0): Modeline "1024x576"x119.9   78.38  1024 1048 1064 1104  576 577 580 592 doublescan +hsync -vsync (71.0 kHz d)
-[    35.343] (II) modeset(0): Modeline "1024x576"x59.9   46.50  1024 1064 1160 1296  576 579 584 599 -hsync +vsync (35.9 kHz d)
-[    35.343] (II) modeset(0): Modeline "1024x576"x59.8   42.00  1024 1072 1104 1184  576 579 584 593 +hsync -vsync (35.5 kHz d)
-[    35.343] (II) modeset(0): Modeline "960x600"x119.9   96.62  960 1028 1128 1296  600 601 604 622 doublescan -hsync +vsync (74.6 kHz d)
-[    35.343] (II) modeset(0): Modeline "960x600"x120.0   77.00  960 984 1000 1040  600 601 604 617 doublescan +hsync -vsync (74.0 kHz d)
-[    35.343] (II) modeset(0): Modeline "960x540"x119.9   86.50  960 1024 1124 1288  540 541 544 560 doublescan -hsync +vsync (67.2 kHz d)
-[    35.343] (II) modeset(0): Modeline "960x540"x120.0   69.25  960 984 1000 1040  540 541 544 555 doublescan +hsync -vsync (66.6 kHz d)
-[    35.343] (II) modeset(0): Modeline "960x540"x59.6   40.75  960 992 1088 1216  540 543 548 562 -hsync +vsync (33.5 kHz d)
-[    35.343] (II) modeset(0): Modeline "960x540"x59.8   37.25  960 1008 1040 1120  540 543 548 556 +hsync -vsync (33.3 kHz d)
-[    35.343] (II) modeset(0): Modeline "800x600"x120.0   81.00  800 832 928 1080  600 600 602 625 doublescan +hsync +vsync (75.0 kHz d)
-[    35.343] (II) modeset(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz d)
-[    35.343] (II) modeset(0): Modeline "800x600"x56.2   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz d)
-[    35.343] (II) modeset(0): Modeline "840x525"x120.0   73.12  840 892 980 1120  525 526 529 544 doublescan -hsync +vsync (65.3 kHz d)
-[    35.343] (II) modeset(0): Modeline "840x525"x119.8   59.50  840 864 880 920  525 526 529 540 doublescan +hsync -vsync (64.7 kHz d)
-[    35.343] (II) modeset(0): Modeline "864x486"x59.9   32.50  864 888 968 1072  486 489 494 506 -hsync +vsync (30.3 kHz d)
-[    35.343] (II) modeset(0): Modeline "864x486"x59.6   30.50  864 912 944 1024  486 489 494 500 +hsync -vsync (29.8 kHz d)
-[    35.343] (II) modeset(0): Modeline "800x512"x120.3   51.56  800 800 828 832  512 512 514 515 doublescan +hsync +vsync (62.0 kHz d)
-[    35.343] (II) modeset(0): Modeline "700x525"x120.0   61.00  700 744 820 940  525 526 532 541 doublescan +hsync +vsync (64.9 kHz d)
-[    35.343] (II) modeset(0): Modeline "800x450"x119.9   59.12  800 848 928 1056  450 451 454 467 doublescan -hsync +vsync (56.0 kHz d)
-[    35.343] (II) modeset(0): Modeline "800x450"x119.6   48.75  800 824 840 880  450 451 454 463 doublescan +hsync -vsync (55.4 kHz d)
-[    35.343] (II) modeset(0): Modeline "640x512"x120.0   54.00  640 664 720 844  512 512 514 533 doublescan +hsync +vsync (64.0 kHz d)
-[    35.343] (II) modeset(0): Modeline "720x450"x119.8   53.25  720 760 836 952  450 451 454 467 doublescan -hsync +vsync (55.9 kHz d)
-[    35.343] (II) modeset(0): Modeline "700x450"x119.9   51.75  700 740 812 924  450 451 456 467 doublescan -hsync +vsync (56.0 kHz d)
-[    35.343] (II) modeset(0): Modeline "700x450"x119.8   43.25  700 724 740 780  450 451 456 463 doublescan +hsync -vsync (55.4 kHz d)
-[    35.343] (II) modeset(0): Modeline "640x480"x120.0   54.00  640 688 744 900  480 480 482 500 doublescan +hsync +vsync (60.0 kHz d)
-[    35.343] (II) modeset(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz d)
-[    35.343] (II) modeset(0): Modeline "720x405"x59.5   22.50  720 744 808 896  405 408 413 422 -hsync +vsync (25.1 kHz d)
-[    35.343] (II) modeset(0): Modeline "720x405"x59.0   21.75  720 768 800 880  405 408 413 419 +hsync -vsync (24.7 kHz d)
-[    35.343] (II) modeset(0): Modeline "684x384"x119.8   42.62  684 720 788 892  384 385 390 399 doublescan -hsync +vsync (47.8 kHz d)
-[    35.343] (II) modeset(0): Modeline "684x384"x119.7   36.12  684 708 724 764  384 385 390 395 doublescan +hsync -vsync (47.3 kHz d)
-[    35.343] (II) modeset(0): Modeline "680x384"x119.6   42.38  680 716 784 888  384 385 390 399 doublescan -hsync +vsync (47.7 kHz d)
-[    35.343] (II) modeset(0): Modeline "680x384"x119.9   36.00  680 704 720 760  384 385 390 395 doublescan +hsync -vsync (47.4 kHz d)
-[    35.343] (II) modeset(0): Modeline "640x400"x119.8   41.75  640 676 740 840  400 401 404 415 doublescan -hsync +vsync (49.7 kHz d)
-[    35.343] (II) modeset(0): Modeline "640x400"x120.0   35.50  640 664 680 720  400 401 404 411 doublescan +hsync -vsync (49.3 kHz d)
-[    35.343] (II) modeset(0): Modeline "576x432"x120.1   40.81  576 608 668 760  432 432 434 447 doublescan -hsync +vsync (53.7 kHz d)
-[    35.343] (II) modeset(0): Modeline "640x360"x119.7   37.25  640 672 736 832  360 361 364 374 doublescan -hsync +vsync (44.8 kHz d)
-[    35.343] (II) modeset(0): Modeline "640x360"x119.7   31.88  640 664 680 720  360 361 364 370 doublescan +hsync -vsync (44.3 kHz d)
-[    35.343] (II) modeset(0): Modeline "640x360"x59.8   18.00  640 664 720 800  360 363 368 376 -hsync +vsync (22.5 kHz d)
-[    35.343] (II) modeset(0): Modeline "640x360"x59.3   17.75  640 688 720 800  360 363 368 374 +hsync -vsync (22.2 kHz d)
-[    35.343] (II) modeset(0): Modeline "512x384"x120.0   32.50  512 524 592 672  384 385 388 403 doublescan -hsync -vsync (48.4 kHz d)
-[    35.343] (II) modeset(0): Modeline "512x288"x120.0   23.25  512 532 580 648  288 289 292 299 doublescan -hsync +vsync (35.9 kHz d)
-[    35.343] (II) modeset(0): Modeline "512x288"x119.8   21.00  512 536 552 592  288 289 292 296 doublescan +hsync -vsync (35.5 kHz d)
-[    35.343] (II) modeset(0): Modeline "480x270"x119.3   20.38  480 496 544 608  270 271 274 281 doublescan -hsync +vsync (33.5 kHz d)
-[    35.343] (II) modeset(0): Modeline "480x270"x119.6   18.62  480 504 520 560  270 271 274 278 doublescan +hsync -vsync (33.3 kHz d)
-[    35.343] (II) modeset(0): Modeline "400x300"x120.6   20.00  400 420 484 528  300 300 302 314 doublescan +hsync +vsync (37.9 kHz d)
-[    35.343] (II) modeset(0): Modeline "400x300"x112.7   18.00  400 412 448 512  300 300 301 312 doublescan +hsync +vsync (35.2 kHz d)
-[    35.343] (II) modeset(0): Modeline "432x243"x119.8   16.25  432 444 484 536  243 244 247 253 doublescan -hsync +vsync (30.3 kHz d)
-[    35.343] (II) modeset(0): Modeline "432x243"x119.1   15.25  432 456 472 512  243 244 247 250 doublescan +hsync -vsync (29.8 kHz d)
-[    35.343] (II) modeset(0): Modeline "320x240"x120.1   12.59  320 328 376 400  240 245 246 262 doublescan -hsync -vsync (31.5 kHz d)
-[    35.343] (II) modeset(0): Modeline "360x202"x119.0   11.25  360 372 404 448  202 204 206 211 doublescan -hsync +vsync (25.1 kHz d)
-[    35.343] (II) modeset(0): Modeline "360x202"x118.3   10.88  360 384 400 440  202 204 206 209 doublescan +hsync -vsync (24.7 kHz d)
-[    35.344] (II) modeset(0): Modeline "320x180"x119.7    9.00  320 332 360 400  180 181 184 188 doublescan -hsync +vsync (22.5 kHz d)
-[    35.344] (II) modeset(0): Modeline "320x180"x118.6    8.88  320 344 360 400  180 181 184 187 doublescan +hsync -vsync (22.2 kHz d)
-[    35.344] (II) modeset(0): EDID for output DP-1
-[    35.345] (II) modeset(0): EDID for output HDMI-1
-[    35.345] (II) modeset(0): Output eDP-1 connected
-[    35.345] (II) modeset(0): Output DP-1 disconnected
-[    35.345] (II) modeset(0): Output HDMI-1 disconnected
-[    35.345] (II) modeset(0): Using exact sizes for initial modes
-[    35.345] (II) modeset(0): Output eDP-1 using initial mode 1366x768 +0+0
-[    35.345] (==) modeset(0): Using gamma correction (1.0, 1.0, 1.0)
-[    35.345] (==) modeset(0): DPI set to (96, 96)
-[    35.345] (II) Loading sub module "fb"
-[    35.345] (II) LoadModule: "fb"
-[    35.345] (II) Loading /usr/lib/xorg/modules/libfb.so
-[    35.356] (II) Module fb: vendor="X.Org Foundation"
-[    35.357] 	compiled for 1.20.5, module version = 1.0.0
-[    35.357] 	ABI class: X.Org ANSI C Emulation, version 0.4
-[    35.357] (II) UnloadModule: "fbdev"
-[    35.357] (II) Unloading fbdev
-[    35.357] (II) UnloadSubModule: "fbdevhw"
-[    35.357] (II) Unloading fbdevhw
-[    35.357] (II) UnloadModule: "vesa"
-[    35.357] (II) Unloading vesa
-[    35.430] (==) modeset(0): Backing store enabled
-[    35.430] (==) modeset(0): Silken mouse enabled
-[    35.511] (II) modeset(0): Initializing kms color map for depth 24, 8 bpc.
-[    35.511] (==) modeset(0): DPMS enabled
-[    35.512] (II) modeset(0): [DRI2] Setup complete
-[    35.512] (II) modeset(0): [DRI2]   DRI driver: i965
-[    35.512] (II) modeset(0): [DRI2]   VDPAU driver: va_gl
-[    35.512] (II) Initializing extension Generic Event Extension
-[    35.512] (II) Initializing extension SHAPE
-[    35.513] (II) Initializing extension MIT-SHM
-[    35.513] (II) Initializing extension XInputExtension
-[    35.515] (II) Initializing extension XTEST
-[    35.515] (II) Initializing extension BIG-REQUESTS
-[    35.515] (II) Initializing extension SYNC
-[    35.515] (II) Initializing extension XKEYBOARD
-[    35.516] (II) Initializing extension XC-MISC
-[    35.516] (II) Initializing extension SECURITY
-[    35.516] (II) Initializing extension XFIXES
-[    35.516] (II) Initializing extension RENDER
-[    35.517] (II) Initializing extension RANDR
-[    35.517] (II) Initializing extension COMPOSITE
-[    35.517] (II) Initializing extension DAMAGE
-[    35.517] (II) Initializing extension MIT-SCREEN-SAVER
-[    35.518] (II) Initializing extension DOUBLE-BUFFER
-[    35.518] (II) Initializing extension RECORD
-[    35.518] (II) Initializing extension DPMS
-[    35.518] (II) Initializing extension Present
-[    35.519] (II) Initializing extension DRI3
-[    35.519] (II) Initializing extension X-Resource
-[    35.519] (II) Initializing extension XVideo
-[    35.519] (II) Initializing extension XVideo-MotionCompensation
-[    35.519] (II) Initializing extension SELinux
-[    35.519] (II) SELinux: Disabled on system
-[    35.519] (II) Initializing extension GLX
-[    35.527] (II) AIGLX: Loaded and initialized i965
-[    35.527] (II) GLX: Initialized DRI2 GL provider for screen 0
-[    35.527] (II) Initializing extension XFree86-VidModeExtension
-[    35.527] (II) Initializing extension XFree86-DGA
-[    35.528] (II) Initializing extension XFree86-DRI
-[    35.528] (II) Initializing extension DRI2
-[    35.629] (II) modeset(0): Damage tracking initialized
-[    35.629] (II) modeset(0): Setting screen physical size to 361 x 203
-[    35.820] (II) config/udev: Adding input device Power Button (/dev/input/event2)
-[    35.820] (**) Power Button: Applying InputClass "libinput keyboard catchall"
-[    35.820] (II) LoadModule: "libinput"
-[    35.820] (II) Loading /usr/lib/xorg/modules/input/libinput_drv.so
-[    35.874] (II) Module libinput: vendor="X.Org Foundation"
-[    35.874] 	compiled for 1.20.1, module version = 0.28.1
-[    35.874] 	Module class: X.Org XInput Driver
-[    35.874] 	ABI class: X.Org XInput driver, version 24.1
-[    35.874] (II) Using input driver 'libinput' for 'Power Button'
-[    35.876] (II) systemd-logind: got fd for /dev/input/event2 13:66 fd 21 paused 0
-[    35.876] (**) Power Button: always reports core events
-[    35.876] (**) Option "Device" "/dev/input/event2"
-[    35.876] (**) Option "_source" "server/udev"
-[    35.878] (II) event2  - Power Button: is tagged by udev as: Keyboard
-[    35.878] (II) event2  - Power Button: device is a keyboard
-[    35.878] (II) event2  - Power Button: device removed
-[    35.878] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input2/event2"
-[    35.878] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 6)
-[    35.878] (**) Option "xkb_model" "pc105"
-[    35.878] (**) Option "xkb_layout" "us"
-[    35.880] (II) event2  - Power Button: is tagged by udev as: Keyboard
-[    35.880] (II) event2  - Power Button: device is a keyboard
-[    35.882] (II) config/udev: Adding input device Video Bus (/dev/input/event10)
-[    35.882] (**) Video Bus: Applying InputClass "libinput keyboard catchall"
-[    35.882] (II) Using input driver 'libinput' for 'Video Bus'
-[    35.884] (II) systemd-logind: got fd for /dev/input/event10 13:74 fd 24 paused 0
-[    35.884] (**) Video Bus: always reports core events
-[    35.884] (**) Option "Device" "/dev/input/event10"
-[    35.884] (**) Option "_source" "server/udev"
-[    35.885] (II) event10 - Video Bus: is tagged by udev as: Keyboard
-[    35.885] (II) event10 - Video Bus: device is a keyboard
-[    35.885] (II) event10 - Video Bus: device removed
-[    35.885] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input11/event10"
-[    35.885] (II) XINPUT: Adding extended input device "Video Bus" (type: KEYBOARD, id 7)
-[    35.885] (**) Option "xkb_model" "pc105"
-[    35.885] (**) Option "xkb_layout" "us"
-[    35.886] (II) event10 - Video Bus: is tagged by udev as: Keyboard
-[    35.886] (II) event10 - Video Bus: device is a keyboard
-[    35.886] (II) config/udev: Adding input device Power Button (/dev/input/event0)
-[    35.886] (**) Power Button: Applying InputClass "libinput keyboard catchall"
-[    35.886] (II) Using input driver 'libinput' for 'Power Button'
-[    35.887] (II) systemd-logind: got fd for /dev/input/event0 13:64 fd 25 paused 0
-[    35.887] (**) Power Button: always reports core events
-[    35.887] (**) Option "Device" "/dev/input/event0"
-[    35.887] (**) Option "_source" "server/udev"
-[    35.888] (II) event0  - Power Button: is tagged by udev as: Keyboard
-[    35.888] (II) event0  - Power Button: device is a keyboard
-[    35.888] (II) event0  - Power Button: device removed
-[    35.888] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:01/PNP0C0C:00/input/input0/event0"
-[    35.888] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 8)
-[    35.888] (**) Option "xkb_model" "pc105"
-[    35.888] (**) Option "xkb_layout" "us"
-[    35.889] (II) event0  - Power Button: is tagged by udev as: Keyboard
-[    35.889] (II) event0  - Power Button: device is a keyboard
-[    35.890] (II) config/udev: Adding input device Lid Switch (/dev/input/event1)
-[    35.890] (II) No input driver specified, ignoring this device.
-[    35.890] (II) This device may have been added with another device file.
-[    35.891] (II) config/udev: Adding input device HDA Intel HDMI HDMI/DP,pcm=3 (/dev/input/event11)
-[    35.891] (II) No input driver specified, ignoring this device.
-[    35.891] (II) This device may have been added with another device file.
-[    35.891] (II) config/udev: Adding input device HDA Intel HDMI HDMI/DP,pcm=7 (/dev/input/event12)
-[    35.891] (II) No input driver specified, ignoring this device.
-[    35.891] (II) This device may have been added with another device file.
-[    35.892] (II) config/udev: Adding input device HDA Intel HDMI HDMI/DP,pcm=8 (/dev/input/event13)
-[    35.892] (II) No input driver specified, ignoring this device.
-[    35.892] (II) This device may have been added with another device file.
-[    35.892] (II) config/udev: Adding input device HDA Intel HDMI HDMI/DP,pcm=9 (/dev/input/event14)
-[    35.892] (II) No input driver specified, ignoring this device.
-[    35.892] (II) This device may have been added with another device file.
-[    35.893] (II) config/udev: Adding input device HDA Intel HDMI HDMI/DP,pcm=10 (/dev/input/event15)
-[    35.893] (II) No input driver specified, ignoring this device.
-[    35.893] (II) This device may have been added with another device file.
-[    35.893] (II) config/udev: Adding input device Telink Wireless Receiver Mouse (/dev/input/event5)
-[    35.893] (**) Telink Wireless Receiver Mouse: Applying InputClass "libinput pointer catchall"
-[    35.893] (II) Using input driver 'libinput' for 'Telink Wireless Receiver Mouse'
-[    35.894] (II) systemd-logind: got fd for /dev/input/event5 13:69 fd 26 paused 0
-[    35.894] (**) Telink Wireless Receiver Mouse: always reports core events
-[    35.894] (**) Option "Device" "/dev/input/event5"
-[    35.894] (**) Option "_source" "server/udev"
-[    35.895] (II) event5  - Telink Wireless Receiver Mouse: is tagged by udev as: Mouse
-[    35.895] (II) event5  - Telink Wireless Receiver Mouse: device is a pointer
-[    35.895] (II) event5  - Telink Wireless Receiver Mouse: device removed
-[    35.895] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:248A:8367.0001/input/input6/event5"
-[    35.895] (II) XINPUT: Adding extended input device "Telink Wireless Receiver Mouse" (type: MOUSE, id 9)
-[    35.896] (**) Option "AccelerationScheme" "none"
-[    35.896] (**) Telink Wireless Receiver Mouse: (accel) selected scheme none/0
-[    35.896] (**) Telink Wireless Receiver Mouse: (accel) acceleration factor: 2.000
-[    35.896] (**) Telink Wireless Receiver Mouse: (accel) acceleration threshold: 4
-[    35.897] (II) event5  - Telink Wireless Receiver Mouse: is tagged by udev as: Mouse
-[    35.897] (II) event5  - Telink Wireless Receiver Mouse: device is a pointer
-[    35.898] (II) config/udev: Adding input device Telink Wireless Receiver Mouse (/dev/input/mouse1)
-[    35.898] (II) No input driver specified, ignoring this device.
-[    35.898] (II) This device may have been added with another device file.
-[    35.899] (II) config/udev: Adding input device Telink Wireless Receiver Consumer Control (/dev/input/event6)
-[    35.899] (**) Telink Wireless Receiver Consumer Control: Applying InputClass "libinput keyboard catchall"
-[    35.899] (II) Using input driver 'libinput' for 'Telink Wireless Receiver Consumer Control'
-[    35.900] (II) systemd-logind: got fd for /dev/input/event6 13:70 fd 27 paused 0
-[    35.900] (**) Telink Wireless Receiver Consumer Control: always reports core events
-[    35.900] (**) Option "Device" "/dev/input/event6"
-[    35.900] (**) Option "_source" "server/udev"
-[    35.901] (II) event6  - Telink Wireless Receiver Consumer Control: is tagged by udev as: Keyboard
-[    35.901] (II) event6  - Telink Wireless Receiver Consumer Control: device is a keyboard
-[    35.901] (II) event6  - Telink Wireless Receiver Consumer Control: device removed
-[    35.901] (II) libinput: Telink Wireless Receiver Consumer Control: needs a virtual subdevice
-[    35.901] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:248A:8367.0001/input/input7/event6"
-[    35.901] (II) XINPUT: Adding extended input device "Telink Wireless Receiver Consumer Control" (type: MOUSE, id 10)
-[    35.901] (**) Option "AccelerationScheme" "none"
-[    35.902] (**) Telink Wireless Receiver Consumer Control: (accel) selected scheme none/0
-[    35.902] (**) Telink Wireless Receiver Consumer Control: (accel) acceleration factor: 2.000
-[    35.902] (**) Telink Wireless Receiver Consumer Control: (accel) acceleration threshold: 4
-[    35.903] (II) event6  - Telink Wireless Receiver Consumer Control: is tagged by udev as: Keyboard
-[    35.903] (II) event6  - Telink Wireless Receiver Consumer Control: device is a keyboard
-[    35.904] (II) config/udev: Adding input device Telink Wireless Receiver System Control (/dev/input/event7)
-[    35.904] (**) Telink Wireless Receiver System Control: Applying InputClass "libinput keyboard catchall"
-[    35.904] (II) Using input driver 'libinput' for 'Telink Wireless Receiver System Control'
-[    35.905] (II) systemd-logind: got fd for /dev/input/event7 13:71 fd 28 paused 0
-[    35.905] (**) Telink Wireless Receiver System Control: always reports core events
-[    35.905] (**) Option "Device" "/dev/input/event7"
-[    35.905] (**) Option "_source" "server/udev"
-[    35.906] (II) event7  - Telink Wireless Receiver System Control: is tagged by udev as: Keyboard
-[    35.906] (II) event7  - Telink Wireless Receiver System Control: device is a keyboard
-[    35.906] (II) event7  - Telink Wireless Receiver System Control: device removed
-[    35.906] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:248A:8367.0001/input/input8/event7"
-[    35.906] (II) XINPUT: Adding extended input device "Telink Wireless Receiver System Control" (type: KEYBOARD, id 11)
-[    35.906] (**) Option "xkb_model" "pc105"
-[    35.906] (**) Option "xkb_layout" "us"
-[    35.907] (II) event7  - Telink Wireless Receiver System Control: is tagged by udev as: Keyboard
-[    35.907] (II) event7  - Telink Wireless Receiver System Control: device is a keyboard
-[    35.908] (II) config/udev: Adding input device Telink Wireless Receiver (/dev/input/event8)
-[    35.909] (**) Telink Wireless Receiver: Applying InputClass "libinput keyboard catchall"
-[    35.909] (II) Using input driver 'libinput' for 'Telink Wireless Receiver'
-[    35.910] (II) systemd-logind: got fd for /dev/input/event8 13:72 fd 29 paused 0
-[    35.910] (**) Telink Wireless Receiver: always reports core events
-[    35.910] (**) Option "Device" "/dev/input/event8"
-[    35.910] (**) Option "_source" "server/udev"
-[    35.911] (II) event8  - Telink Wireless Receiver: is tagged by udev as: Keyboard
-[    35.911] (II) event8  - Telink Wireless Receiver: device is a keyboard
-[    35.911] (II) event8  - Telink Wireless Receiver: device removed
-[    35.911] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.1/0003:248A:8367.0002/input/input9/event8"
-[    35.911] (II) XINPUT: Adding extended input device "Telink Wireless Receiver" (type: KEYBOARD, id 12)
-[    35.911] (**) Option "xkb_model" "pc105"
-[    35.911] (**) Option "xkb_layout" "us"
-[    35.912] (II) event8  - Telink Wireless Receiver: is tagged by udev as: Keyboard
-[    35.912] (II) event8  - Telink Wireless Receiver: device is a keyboard
-[    35.913] (II) config/udev: Adding input device Lenovo EasyCamera: Lenovo EasyC (/dev/input/event18)
-[    35.913] (**) Lenovo EasyCamera: Lenovo EasyC: Applying InputClass "libinput keyboard catchall"
-[    35.913] (II) Using input driver 'libinput' for 'Lenovo EasyCamera: Lenovo EasyC'
-[    35.914] (II) systemd-logind: got fd for /dev/input/event18 13:82 fd 30 paused 0
-[    35.914] (**) Lenovo EasyCamera: Lenovo EasyC: always reports core events
-[    35.914] (**) Option "Device" "/dev/input/event18"
-[    35.914] (**) Option "_source" "server/udev"
-[    35.915] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: is tagged by udev as: Keyboard
-[    35.915] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: device is a keyboard
-[    35.915] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: device removed
-[    35.915] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-6/2-6:1.0/input/input19/event18"
-[    35.915] (II) XINPUT: Adding extended input device "Lenovo EasyCamera: Lenovo EasyC" (type: KEYBOARD, id 13)
-[    35.915] (**) Option "xkb_model" "pc105"
-[    35.915] (**) Option "xkb_layout" "us"
-[    35.916] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: is tagged by udev as: Keyboard
-[    35.916] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: device is a keyboard
-[    35.917] (II) config/udev: Adding input device HDA Intel PCH Mic (/dev/input/event16)
-[    35.917] (II) No input driver specified, ignoring this device.
-[    35.917] (II) This device may have been added with another device file.
-[    35.917] (II) config/udev: Adding input device HDA Intel PCH Headphone (/dev/input/event17)
-[    35.917] (II) No input driver specified, ignoring this device.
-[    35.917] (II) This device may have been added with another device file.
-[    35.918] (II) config/udev: Adding input device Ideapad extra buttons (/dev/input/event9)
-[    35.918] (**) Ideapad extra buttons: Applying InputClass "libinput keyboard catchall"
-[    35.918] (II) Using input driver 'libinput' for 'Ideapad extra buttons'
-[    35.919] (II) systemd-logind: got fd for /dev/input/event9 13:73 fd 31 paused 0
-[    35.919] (**) Ideapad extra buttons: always reports core events
-[    35.919] (**) Option "Device" "/dev/input/event9"
-[    35.919] (**) Option "_source" "server/udev"
-[    35.920] (II) event9  - Ideapad extra buttons: is tagged by udev as: Keyboard
-[    35.920] (II) event9  - Ideapad extra buttons: device is a keyboard
-[    35.920] (II) event9  - Ideapad extra buttons: device removed
-[    35.920] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1f.0/PNP0C09:00/VPC2004:00/input/input10/event9"
-[    35.920] (II) XINPUT: Adding extended input device "Ideapad extra buttons" (type: KEYBOARD, id 14)
-[    35.920] (**) Option "xkb_model" "pc105"
-[    35.920] (**) Option "xkb_layout" "us"
-[    35.921] (II) event9  - Ideapad extra buttons: is tagged by udev as: Keyboard
-[    35.921] (II) event9  - Ideapad extra buttons: device is a keyboard
-[    35.922] (II) config/udev: Adding input device AT Translated Set 2 keyboard (/dev/input/event3)
-[    35.922] (**) AT Translated Set 2 keyboard: Applying InputClass "libinput keyboard catchall"
-[    35.922] (II) Using input driver 'libinput' for 'AT Translated Set 2 keyboard'
-[    35.923] (II) systemd-logind: got fd for /dev/input/event3 13:67 fd 32 paused 0
-[    35.924] (**) AT Translated Set 2 keyboard: always reports core events
-[    35.924] (**) Option "Device" "/dev/input/event3"
-[    35.924] (**) Option "_source" "server/udev"
-[    35.925] (II) event3  - AT Translated Set 2 keyboard: is tagged by udev as: Keyboard
-[    35.925] (II) event3  - AT Translated Set 2 keyboard: device is a keyboard
-[    35.925] (II) event3  - AT Translated Set 2 keyboard: device removed
-[    35.925] (**) Option "config_info" "udev:/sys/devices/platform/i8042/serio0/input/input3/event3"
-[    35.925] (II) XINPUT: Adding extended input device "AT Translated Set 2 keyboard" (type: KEYBOARD, id 15)
-[    35.925] (**) Option "xkb_model" "pc105"
-[    35.925] (**) Option "xkb_layout" "us"
-[    35.927] (II) event3  - AT Translated Set 2 keyboard: is tagged by udev as: Keyboard
-[    35.927] (II) event3  - AT Translated Set 2 keyboard: device is a keyboard
-[    35.927] (II) config/udev: Adding input device ETPS/2 Elantech Touchpad (/dev/input/event4)
-[    35.927] (**) ETPS/2 Elantech Touchpad: Applying InputClass "libinput touchpad catchall"
-[    35.928] (II) Using input driver 'libinput' for 'ETPS/2 Elantech Touchpad'
-[    35.928] (II) systemd-logind: got fd for /dev/input/event4 13:68 fd 33 paused 0
-[    35.929] (**) ETPS/2 Elantech Touchpad: always reports core events
-[    35.929] (**) Option "Device" "/dev/input/event4"
-[    35.929] (**) Option "_source" "server/udev"
-[    35.929] (II) event4  - ETPS/2 Elantech Touchpad: is tagged by udev as: Touchpad
-[    35.930] (II) event4  - ETPS/2 Elantech Touchpad: device is a touchpad
-[    35.930] (II) event4  - ETPS/2 Elantech Touchpad: device removed
-[    35.930] (**) Option "config_info" "udev:/sys/devices/platform/i8042/serio1/input/input5/event4"
-[    35.930] (II) XINPUT: Adding extended input device "ETPS/2 Elantech Touchpad" (type: TOUCHPAD, id 16)
-[    35.930] (**) Option "AccelerationScheme" "none"
-[    35.930] (**) ETPS/2 Elantech Touchpad: (accel) selected scheme none/0
-[    35.930] (**) ETPS/2 Elantech Touchpad: (accel) acceleration factor: 2.000
-[    35.930] (**) ETPS/2 Elantech Touchpad: (accel) acceleration threshold: 4
-[    35.931] (II) event4  - ETPS/2 Elantech Touchpad: is tagged by udev as: Touchpad
-[    35.931] (II) event4  - ETPS/2 Elantech Touchpad: device is a touchpad
-[    35.932] (II) config/udev: Adding input device ETPS/2 Elantech Touchpad (/dev/input/mouse0)
-[    35.932] (II) No input driver specified, ignoring this device.
-[    35.932] (II) This device may have been added with another device file.
-[    35.944] (**) Telink Wireless Receiver Consumer Control: Applying InputClass "libinput keyboard catchall"
-[    35.944] (II) Using input driver 'libinput' for 'Telink Wireless Receiver Consumer Control'
-[    35.944] (II) systemd-logind: returning pre-existing fd for /dev/input/event6 13:70
-[    35.944] (**) Telink Wireless Receiver Consumer Control: always reports core events
-[    35.944] (**) Option "Device" "/dev/input/event6"
-[    35.944] (**) Option "_source" "_driver/libinput"
-[    35.944] (II) libinput: Telink Wireless Receiver Consumer Control: is a virtual subdevice
-[    35.944] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:248A:8367.0001/input/input7/event6"
-[    35.945] (II) XINPUT: Adding extended input device "Telink Wireless Receiver Consumer Control" (type: KEYBOARD, id 17)
-[    35.945] (**) Option "xkb_model" "pc105"
-[    35.945] (**) Option "xkb_layout" "us"
-[    40.488] (II) modeset(0): EDID vendor "CMN", prod id 5565
-[    40.488] (II) modeset(0): Printing DDC gathered Modelines:
-[    40.488] (II) modeset(0): Modeline "1366x768"x0.0   76.42  1366 1434 1479 1592  768 772 779 800 -hsync -vsync (48.0 kHz eP)
-[    64.144] (II) modeset(0): EDID vendor "CMN", prod id 5565
-[    64.144] (II) modeset(0): Printing DDC gathered Modelines:
-[    64.144] (II) modeset(0): Modeline "1366x768"x0.0   76.42  1366 1434 1479 1592  768 772 779 800 -hsync -vsync (48.0 kHz eP)
-[   538.029] (EE) client bug: timer event5 debounce: offset negative (-754ms)
-[   538.124] (EE) client bug: timer event5 debounce: offset negative (-678ms)
-[   538.124] (EE) client bug: timer event5 debounce short: offset negative (-691ms)
-[  1864.623] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[  1869.545] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[  1869.545] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
-[  1876.415] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[  1876.518] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
-[  1877.785] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[  1904.915] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[  1905.716] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[  1924.117] (EE) client bug: timer event4 tap: offset negative (-292ms)
-[  1924.149] (EE) client bug: timer event4 gestures: offset negative (-319ms)
-[  1924.149] (EE) client bug: timer event4 tap: offset negative (-206ms)
-[  1924.149] (EE) client bug: timer event4 tap: offset negative (-66ms)
-[  1924.149] (EE) client bug: timer event4 tap: offset negative (-51ms)
-[  1924.150] (EE) client bug: timer event4 gestures: offset negative (-5ms)
-[  4114.179] (EE) client bug: timer event4 tap: offset negative (-27ms)
-[  4115.678] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
-[  4117.474] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
-[  6550.336] (EE) client bug: timer event4 tap: offset negative (-37ms)
-[  6555.442] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
-[  6570.827] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[  6573.927] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[  6574.929] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[  8148.436] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[  8660.829] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
-[  8660.940] (EE) client bug: timer event4 tap: offset negative (-112ms)
-[  8663.895] (EE) client bug: timer event4 tap: offset negative (-761ms)
-[  8663.896] (EE) client bug: timer event4 tap: offset negative (-389ms)
-[  8665.079] (EE) client bug: timer event4 tap: offset negative (-697ms)
-[  8665.080] (EE) client bug: timer event4 tap: offset negative (-49ms)
-[  8666.063] (EE) client bug: timer event4 tap: offset negative (-306ms)
-[  8667.142] (EE) client bug: timer event4 tap: offset negative (-589ms)
-[  8667.143] (EE) client bug: timer event4 tap: offset negative (-177ms)
-[  8668.080] (EE) client bug: timer event4 tap: offset negative (-447ms)
-[  8672.502] (EE) client bug: timer event4 tap: offset negative (-437ms)
-[  8672.503] (EE) client bug: timer event4 tap: offset negative (-368ms)
-[  8672.503] (EE) client bug: timer event4 tap: offset negative (-155ms)
-[  8673.568] (EE) client bug: timer event4 tap: offset negative (-532ms)
-[  8683.461] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
-[  8683.461] (EE) client bug: timer event4 tap: offset negative (-41ms)
-[  8697.436] (EE) client bug: timer event4 tap: offset negative (-98ms)
-[  8791.910] (EE) client bug: timer event4 tap: offset negative (-360ms)
-[  8792.429] (EE) client bug: timer event4 tap: offset negative (-94ms)
-[ 10779.823] (EE) client bug: timer event5 debounce: offset negative (-522ms)
-[ 10779.972] (EE) client bug: timer event5 debounce: offset negative (-455ms)
-[ 10779.972] (EE) client bug: timer event5 debounce short: offset negative (-468ms)
-[ 10869.743] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[ 10871.512] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
-[ 12003.182] (**) Option "fd" "21"
-[ 12003.991] (II) event2  - Power Button: device removed
-[ 12004.140] (**) Option "fd" "24"
-[ 12004.140] (II) event10 - Video Bus: device removed
-[ 12004.140] (**) Option "fd" "25"
-[ 12004.141] (II) event0  - Power Button: device removed
-[ 12004.141] (**) Option "fd" "26"
-[ 12004.141] (II) event5  - Telink Wireless Receiver Mouse: device removed
-[ 12004.533] (**) Option "fd" "27"
-[ 12004.533] (**) Option "fd" "28"
-[ 12004.533] (II) event7  - Telink Wireless Receiver System Control: device removed
-[ 12004.533] (**) Option "fd" "29"
-[ 12004.533] (II) event8  - Telink Wireless Receiver: device removed
-[ 12004.533] (**) Option "fd" "30"
-[ 12004.533] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: device removed
-[ 12004.533] (**) Option "fd" "31"
-[ 12004.534] (II) event9  - Ideapad extra buttons: device removed
-[ 12004.534] (**) Option "fd" "32"
-[ 12004.534] (II) event3  - AT Translated Set 2 keyboard: device removed
-[ 12004.534] (**) Option "fd" "33"
-[ 12004.534] (II) event4  - ETPS/2 Elantech Touchpad: device removed
-[ 12004.562] (**) Option "fd" "27"
-[ 12004.562] (II) event6  - Telink Wireless Receiver Consumer Control: device removed
-[ 12006.416] (II) UnloadModule: "libinput"
-[ 12006.416] (II) systemd-logind: not releasing fd for 13:70, still in use
-[ 12006.416] (II) UnloadModule: "libinput"
-[ 12006.416] (II) systemd-logind: releasing fd for 13:68
-[ 12006.529] (II) UnloadModule: "libinput"
-[ 12006.529] (II) systemd-logind: releasing fd for 13:67
-[ 12006.545] (II) UnloadModule: "libinput"
-[ 12006.545] (II) systemd-logind: releasing fd for 13:73
-[ 12006.731] (II) UnloadModule: "libinput"
-[ 12006.731] (II) systemd-logind: releasing fd for 13:82
-[ 12006.777] (II) UnloadModule: "libinput"
-[ 12006.777] (II) systemd-logind: releasing fd for 13:72
-[ 12006.843] (II) UnloadModule: "libinput"
-[ 12006.843] (II) systemd-logind: releasing fd for 13:71
-[ 12006.861] (II) UnloadModule: "libinput"
-[ 12006.861] (II) systemd-logind: releasing fd for 13:70
-[ 12006.905] (II) UnloadModule: "libinput"
-[ 12006.905] (II) systemd-logind: releasing fd for 13:69
-[ 12006.941] (II) UnloadModule: "libinput"
-[ 12006.941] (II) systemd-logind: releasing fd for 13:64
-[ 12006.957] (II) UnloadModule: "libinput"
-[ 12006.957] (II) systemd-logind: releasing fd for 13:74
-[ 12007.176] (II) UnloadModule: "libinput"
-[ 12007.176] (II) systemd-logind: releasing fd for 13:66
-[ 12010.353] (II) Server terminated successfully (0). Closing log file.
+[    43.923] (==) modeset(0): Depth 24, (==) framebuffer bpp 32
+[    43.923] (==) modeset(0): RGB weight 888
+[    43.923] (==) modeset(0): Default visual is TrueColor
+[    43.923] (II) Loading sub module "glamoregl"
+[    43.923] (II) LoadModule: "glamoregl"
+[    43.923] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[    44.123] (II) Module glamoregl: vendor="X.Org Foundation"
+[    44.123] 	compiled for 1.20.5, module version = 1.0.1
+[    44.123] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    44.713] (II) modeset(0): glamor X acceleration enabled on Mesa DRI Intel(R) Haswell Mobile 
+[    44.713] (II) modeset(0): glamor initialized
+[    44.714] (II) modeset(0): Output eDP-1 has no monitor section
+[    44.714] (II) modeset(0): Output DP-1 has no monitor section
+[    44.716] (II) modeset(0): Output HDMI-1 has no monitor section
+[    44.717] (II) modeset(0): EDID for output eDP-1
+[    44.717] (II) modeset(0): Manufacturer: CMN  Model: 15bd  Serial#: 0
+[    44.717] (II) modeset(0): Year: 2013  Week: 30
+[    44.717] (II) modeset(0): EDID Version: 1.4
+[    44.717] (II) modeset(0): Digital Display Input
+[    44.717] (II) modeset(0): 6 bits per channel
+[    44.717] (II) modeset(0): Digital interface is DisplayPort
+[    44.717] (II) modeset(0): Max Image Size [cm]: horiz.: 34  vert.: 19
+[    44.717] (II) modeset(0): Gamma: 2.20
+[    44.717] (II) modeset(0): No DPMS capabilities specified
+[    44.717] (II) modeset(0): Supported color encodings: RGB 4:4:4 
+[    44.717] (II) modeset(0): First detailed timing is preferred mode
+[    44.717] (II) modeset(0): Preferred mode is native pixel format and refresh rate
+[    44.717] (II) modeset(0): redX: 0.573 redY: 0.346   greenX: 0.341 greenY: 0.595
+[    44.717] (II) modeset(0): blueX: 0.161 blueY: 0.115   whiteX: 0.313 whiteY: 0.329
+[    44.718] (II) modeset(0): Manufacturer's mask: 0
+[    44.718] (II) modeset(0): Supported detailed timing:
+[    44.718] (II) modeset(0): clock: 76.4 MHz   Image Size:  344 x 193 mm
+[    44.718] (II) modeset(0): h_active: 1366  h_sync: 1434  h_sync_end 1479 h_blank_end 1592 h_border: 0
+[    44.718] (II) modeset(0): v_active: 768  v_sync: 772  v_sync_end 779 v_blanking: 800 v_border: 0
+[    44.718] (II) modeset(0):  N156BGE-EA1
+[    44.718] (II) modeset(0):  CMN
+[    44.718] (II) modeset(0):  N156BGE-EA1
+[    44.718] (II) modeset(0): EDID (in hex):
+[    44.718] (II) modeset(0): 	00ffffffffffff000daebd1500000000
+[    44.718] (II) modeset(0): 	1e1701049522137802e5659258579829
+[    44.718] (II) modeset(0): 	1d505400000001010101010101010101
+[    44.718] (II) modeset(0): 	010101010101da1d56e250002030442d
+[    44.718] (II) modeset(0): 	470058c110000018000000fe004e3135
+[    44.718] (II) modeset(0): 	364247452d4541310a20000000fe0043
+[    44.718] (II) modeset(0): 	4d4e0a202020202020202020000000fe
+[    44.718] (II) modeset(0): 	004e3135364247452d4541310a200088
+[    44.718] (II) modeset(0): Printing probed modes for output eDP-1
+[    44.718] (II) modeset(0): Modeline "1366x768"x60.0   76.42  1366 1434 1479 1592  768 772 779 800 -hsync -vsync (48.0 kHz eP)
+[    44.718] (II) modeset(0): Modeline "1360x768"x59.8   84.75  1360 1432 1568 1776  768 771 781 798 -hsync +vsync (47.7 kHz d)
+[    44.718] (II) modeset(0): Modeline "1360x768"x60.0   72.00  1360 1408 1440 1520  768 771 781 790 +hsync -vsync (47.4 kHz d)
+[    44.718] (II) modeset(0): Modeline "1280x720"x120.0  156.12  1280 1376 1512 1744  720 721 724 746 doublescan -hsync +vsync (89.5 kHz d)
+[    44.718] (II) modeset(0): Modeline "1280x720"x120.0  120.75  1280 1304 1320 1360  720 721 724 740 doublescan +hsync -vsync (88.8 kHz d)
+[    44.718] (II) modeset(0): Modeline "1280x720"x59.9   74.50  1280 1344 1472 1664  720 723 728 748 -hsync +vsync (44.8 kHz d)
+[    44.718] (II) modeset(0): Modeline "1280x720"x59.7   63.75  1280 1328 1360 1440  720 723 728 741 +hsync -vsync (44.3 kHz d)
+[    44.718] (II) modeset(0): Modeline "1024x768"x120.1  133.47  1024 1100 1212 1400  768 768 770 794 doublescan -hsync +vsync (95.3 kHz d)
+[    44.718] (II) modeset(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz d)
+[    44.718] (II) modeset(0): Modeline "960x720"x120.0  117.00  960 1024 1128 1300  720 720 722 750 doublescan -hsync +vsync (90.0 kHz d)
+[    44.718] (II) modeset(0): Modeline "928x696"x120.1  109.15  928 976 1088 1264  696 696 698 719 doublescan -hsync +vsync (86.4 kHz d)
+[    44.718] (II) modeset(0): Modeline "896x672"x120.0  102.40  896 960 1060 1224  672 672 674 697 doublescan -hsync +vsync (83.7 kHz d)
+[    44.718] (II) modeset(0): Modeline "1024x576"x119.9   98.50  1024 1092 1200 1376  576 577 580 597 doublescan -hsync +vsync (71.6 kHz d)
+[    44.718] (II) modeset(0): Modeline "1024x576"x119.9   78.38  1024 1048 1064 1104  576 577 580 592 doublescan +hsync -vsync (71.0 kHz d)
+[    44.718] (II) modeset(0): Modeline "1024x576"x59.9   46.50  1024 1064 1160 1296  576 579 584 599 -hsync +vsync (35.9 kHz d)
+[    44.718] (II) modeset(0): Modeline "1024x576"x59.8   42.00  1024 1072 1104 1184  576 579 584 593 +hsync -vsync (35.5 kHz d)
+[    44.719] (II) modeset(0): Modeline "960x600"x119.9   96.62  960 1028 1128 1296  600 601 604 622 doublescan -hsync +vsync (74.6 kHz d)
+[    44.719] (II) modeset(0): Modeline "960x600"x120.0   77.00  960 984 1000 1040  600 601 604 617 doublescan +hsync -vsync (74.0 kHz d)
+[    44.719] (II) modeset(0): Modeline "960x540"x119.9   86.50  960 1024 1124 1288  540 541 544 560 doublescan -hsync +vsync (67.2 kHz d)
+[    44.719] (II) modeset(0): Modeline "960x540"x120.0   69.25  960 984 1000 1040  540 541 544 555 doublescan +hsync -vsync (66.6 kHz d)
+[    44.719] (II) modeset(0): Modeline "960x540"x59.6   40.75  960 992 1088 1216  540 543 548 562 -hsync +vsync (33.5 kHz d)
+[    44.719] (II) modeset(0): Modeline "960x540"x59.8   37.25  960 1008 1040 1120  540 543 548 556 +hsync -vsync (33.3 kHz d)
+[    44.719] (II) modeset(0): Modeline "800x600"x120.0   81.00  800 832 928 1080  600 600 602 625 doublescan +hsync +vsync (75.0 kHz d)
+[    44.719] (II) modeset(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz d)
+[    44.719] (II) modeset(0): Modeline "800x600"x56.2   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz d)
+[    44.719] (II) modeset(0): Modeline "840x525"x120.0   73.12  840 892 980 1120  525 526 529 544 doublescan -hsync +vsync (65.3 kHz d)
+[    44.719] (II) modeset(0): Modeline "840x525"x119.8   59.50  840 864 880 920  525 526 529 540 doublescan +hsync -vsync (64.7 kHz d)
+[    44.719] (II) modeset(0): Modeline "864x486"x59.9   32.50  864 888 968 1072  486 489 494 506 -hsync +vsync (30.3 kHz d)
+[    44.719] (II) modeset(0): Modeline "864x486"x59.6   30.50  864 912 944 1024  486 489 494 500 +hsync -vsync (29.8 kHz d)
+[    44.719] (II) modeset(0): Modeline "800x512"x120.3   51.56  800 800 828 832  512 512 514 515 doublescan +hsync +vsync (62.0 kHz d)
+[    44.719] (II) modeset(0): Modeline "700x525"x120.0   61.00  700 744 820 940  525 526 532 541 doublescan +hsync +vsync (64.9 kHz d)
+[    44.719] (II) modeset(0): Modeline "800x450"x119.9   59.12  800 848 928 1056  450 451 454 467 doublescan -hsync +vsync (56.0 kHz d)
+[    44.719] (II) modeset(0): Modeline "800x450"x119.6   48.75  800 824 840 880  450 451 454 463 doublescan +hsync -vsync (55.4 kHz d)
+[    44.719] (II) modeset(0): Modeline "640x512"x120.0   54.00  640 664 720 844  512 512 514 533 doublescan +hsync +vsync (64.0 kHz d)
+[    44.719] (II) modeset(0): Modeline "720x450"x119.8   53.25  720 760 836 952  450 451 454 467 doublescan -hsync +vsync (55.9 kHz d)
+[    44.719] (II) modeset(0): Modeline "700x450"x119.9   51.75  700 740 812 924  450 451 456 467 doublescan -hsync +vsync (56.0 kHz d)
+[    44.719] (II) modeset(0): Modeline "700x450"x119.8   43.25  700 724 740 780  450 451 456 463 doublescan +hsync -vsync (55.4 kHz d)
+[    44.719] (II) modeset(0): Modeline "640x480"x120.0   54.00  640 688 744 900  480 480 482 500 doublescan +hsync +vsync (60.0 kHz d)
+[    44.719] (II) modeset(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz d)
+[    44.719] (II) modeset(0): Modeline "720x405"x59.5   22.50  720 744 808 896  405 408 413 422 -hsync +vsync (25.1 kHz d)
+[    44.719] (II) modeset(0): Modeline "720x405"x59.0   21.75  720 768 800 880  405 408 413 419 +hsync -vsync (24.7 kHz d)
+[    44.719] (II) modeset(0): Modeline "684x384"x119.8   42.62  684 720 788 892  384 385 390 399 doublescan -hsync +vsync (47.8 kHz d)
+[    44.719] (II) modeset(0): Modeline "684x384"x119.7   36.12  684 708 724 764  384 385 390 395 doublescan +hsync -vsync (47.3 kHz d)
+[    44.719] (II) modeset(0): Modeline "680x384"x119.6   42.38  680 716 784 888  384 385 390 399 doublescan -hsync +vsync (47.7 kHz d)
+[    44.719] (II) modeset(0): Modeline "680x384"x119.9   36.00  680 704 720 760  384 385 390 395 doublescan +hsync -vsync (47.4 kHz d)
+[    44.719] (II) modeset(0): Modeline "640x400"x119.8   41.75  640 676 740 840  400 401 404 415 doublescan -hsync +vsync (49.7 kHz d)
+[    44.719] (II) modeset(0): Modeline "640x400"x120.0   35.50  640 664 680 720  400 401 404 411 doublescan +hsync -vsync (49.3 kHz d)
+[    44.719] (II) modeset(0): Modeline "576x432"x120.1   40.81  576 608 668 760  432 432 434 447 doublescan -hsync +vsync (53.7 kHz d)
+[    44.719] (II) modeset(0): Modeline "640x360"x119.7   37.25  640 672 736 832  360 361 364 374 doublescan -hsync +vsync (44.8 kHz d)
+[    44.719] (II) modeset(0): Modeline "640x360"x119.7   31.88  640 664 680 720  360 361 364 370 doublescan +hsync -vsync (44.3 kHz d)
+[    44.719] (II) modeset(0): Modeline "640x360"x59.8   18.00  640 664 720 800  360 363 368 376 -hsync +vsync (22.5 kHz d)
+[    44.719] (II) modeset(0): Modeline "640x360"x59.3   17.75  640 688 720 800  360 363 368 374 +hsync -vsync (22.2 kHz d)
+[    44.719] (II) modeset(0): Modeline "512x384"x120.0   32.50  512 524 592 672  384 385 388 403 doublescan -hsync -vsync (48.4 kHz d)
+[    44.719] (II) modeset(0): Modeline "512x288"x120.0   23.25  512 532 580 648  288 289 292 299 doublescan -hsync +vsync (35.9 kHz d)
+[    44.719] (II) modeset(0): Modeline "512x288"x119.8   21.00  512 536 552 592  288 289 292 296 doublescan +hsync -vsync (35.5 kHz d)
+[    44.719] (II) modeset(0): Modeline "480x270"x119.3   20.38  480 496 544 608  270 271 274 281 doublescan -hsync +vsync (33.5 kHz d)
+[    44.719] (II) modeset(0): Modeline "480x270"x119.6   18.62  480 504 520 560  270 271 274 278 doublescan +hsync -vsync (33.3 kHz d)
+[    44.719] (II) modeset(0): Modeline "400x300"x120.6   20.00  400 420 484 528  300 300 302 314 doublescan +hsync +vsync (37.9 kHz d)
+[    44.719] (II) modeset(0): Modeline "400x300"x112.7   18.00  400 412 448 512  300 300 301 312 doublescan +hsync +vsync (35.2 kHz d)
+[    44.719] (II) modeset(0): Modeline "432x243"x119.8   16.25  432 444 484 536  243 244 247 253 doublescan -hsync +vsync (30.3 kHz d)
+[    44.719] (II) modeset(0): Modeline "432x243"x119.1   15.25  432 456 472 512  243 244 247 250 doublescan +hsync -vsync (29.8 kHz d)
+[    44.719] (II) modeset(0): Modeline "320x240"x120.1   12.59  320 328 376 400  240 245 246 262 doublescan -hsync -vsync (31.5 kHz d)
+[    44.719] (II) modeset(0): Modeline "360x202"x119.0   11.25  360 372 404 448  202 204 206 211 doublescan -hsync +vsync (25.1 kHz d)
+[    44.719] (II) modeset(0): Modeline "360x202"x118.3   10.88  360 384 400 440  202 204 206 209 doublescan +hsync -vsync (24.7 kHz d)
+[    44.719] (II) modeset(0): Modeline "320x180"x119.7    9.00  320 332 360 400  180 181 184 188 doublescan -hsync +vsync (22.5 kHz d)
+[    44.719] (II) modeset(0): Modeline "320x180"x118.6    8.88  320 344 360 400  180 181 184 187 doublescan +hsync -vsync (22.2 kHz d)
+[    44.719] (II) modeset(0): EDID for output DP-1
+[    44.721] (II) modeset(0): EDID for output HDMI-1
+[    44.721] (II) modeset(0): Output eDP-1 connected
+[    44.721] (II) modeset(0): Output DP-1 disconnected
+[    44.721] (II) modeset(0): Output HDMI-1 disconnected
+[    44.721] (II) modeset(0): Using exact sizes for initial modes
+[    44.721] (II) modeset(0): Output eDP-1 using initial mode 1366x768 +0+0
+[    44.721] (==) modeset(0): Using gamma correction (1.0, 1.0, 1.0)
+[    44.721] (==) modeset(0): DPI set to (96, 96)
+[    44.721] (II) Loading sub module "fb"
+[    44.721] (II) LoadModule: "fb"
+[    44.721] (II) Loading /usr/lib/xorg/modules/libfb.so
+[    44.732] (II) Module fb: vendor="X.Org Foundation"
+[    44.732] 	compiled for 1.20.5, module version = 1.0.0
+[    44.732] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    44.732] (II) UnloadModule: "fbdev"
+[    44.732] (II) Unloading fbdev
+[    44.732] (II) UnloadSubModule: "fbdevhw"
+[    44.732] (II) Unloading fbdevhw
+[    44.732] (II) UnloadModule: "vesa"
+[    44.732] (II) Unloading vesa
+[    44.807] (==) modeset(0): Backing store enabled
+[    44.807] (==) modeset(0): Silken mouse enabled
+[    44.863] (II) modeset(0): Initializing kms color map for depth 24, 8 bpc.
+[    44.863] (==) modeset(0): DPMS enabled
+[    44.864] (II) modeset(0): [DRI2] Setup complete
+[    44.864] (II) modeset(0): [DRI2]   DRI driver: i965
+[    44.864] (II) modeset(0): [DRI2]   VDPAU driver: va_gl
+[    44.864] (II) Initializing extension Generic Event Extension
+[    44.865] (II) Initializing extension SHAPE
+[    44.865] (II) Initializing extension MIT-SHM
+[    44.866] (II) Initializing extension XInputExtension
+[    44.867] (II) Initializing extension XTEST
+[    44.867] (II) Initializing extension BIG-REQUESTS
+[    44.867] (II) Initializing extension SYNC
+[    44.868] (II) Initializing extension XKEYBOARD
+[    44.868] (II) Initializing extension XC-MISC
+[    44.869] (II) Initializing extension SECURITY
+[    44.869] (II) Initializing extension XFIXES
+[    44.870] (II) Initializing extension RENDER
+[    44.870] (II) Initializing extension RANDR
+[    44.871] (II) Initializing extension COMPOSITE
+[    44.871] (II) Initializing extension DAMAGE
+[    44.871] (II) Initializing extension MIT-SCREEN-SAVER
+[    44.872] (II) Initializing extension DOUBLE-BUFFER
+[    44.872] (II) Initializing extension RECORD
+[    44.873] (II) Initializing extension DPMS
+[    44.873] (II) Initializing extension Present
+[    44.873] (II) Initializing extension DRI3
+[    44.873] (II) Initializing extension X-Resource
+[    44.873] (II) Initializing extension XVideo
+[    44.874] (II) Initializing extension XVideo-MotionCompensation
+[    44.874] (II) Initializing extension SELinux
+[    44.874] (II) SELinux: Disabled on system
+[    44.874] (II) Initializing extension GLX
+[    44.881] (II) AIGLX: Loaded and initialized i965
+[    44.881] (II) GLX: Initialized DRI2 GL provider for screen 0
+[    44.881] (II) Initializing extension XFree86-VidModeExtension
+[    44.881] (II) Initializing extension XFree86-DGA
+[    44.881] (II) Initializing extension XFree86-DRI
+[    44.881] (II) Initializing extension DRI2
+[    44.993] (II) modeset(0): Damage tracking initialized
+[    44.993] (II) modeset(0): Setting screen physical size to 361 x 203
+[    45.184] (II) config/udev: Adding input device Power Button (/dev/input/event2)
+[    45.184] (**) Power Button: Applying InputClass "libinput keyboard catchall"
+[    45.184] (II) LoadModule: "libinput"
+[    45.185] (II) Loading /usr/lib/xorg/modules/input/libinput_drv.so
+[    45.238] (II) Module libinput: vendor="X.Org Foundation"
+[    45.238] 	compiled for 1.20.1, module version = 0.28.1
+[    45.238] 	Module class: X.Org XInput Driver
+[    45.238] 	ABI class: X.Org XInput driver, version 24.1
+[    45.238] (II) Using input driver 'libinput' for 'Power Button'
+[    45.240] (II) systemd-logind: got fd for /dev/input/event2 13:66 fd 21 paused 0
+[    45.240] (**) Power Button: always reports core events
+[    45.240] (**) Option "Device" "/dev/input/event2"
+[    45.240] (**) Option "_source" "server/udev"
+[    45.242] (II) event2  - Power Button: is tagged by udev as: Keyboard
+[    45.242] (II) event2  - Power Button: device is a keyboard
+[    45.242] (II) event2  - Power Button: device removed
+[    45.242] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input2/event2"
+[    45.242] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 6)
+[    45.242] (**) Option "xkb_model" "pc105"
+[    45.242] (**) Option "xkb_layout" "us"
+[    45.244] (II) event2  - Power Button: is tagged by udev as: Keyboard
+[    45.244] (II) event2  - Power Button: device is a keyboard
+[    45.245] (II) config/udev: Adding input device Video Bus (/dev/input/event10)
+[    45.245] (**) Video Bus: Applying InputClass "libinput keyboard catchall"
+[    45.245] (II) Using input driver 'libinput' for 'Video Bus'
+[    45.247] (II) systemd-logind: got fd for /dev/input/event10 13:74 fd 24 paused 0
+[    45.247] (**) Video Bus: always reports core events
+[    45.247] (**) Option "Device" "/dev/input/event10"
+[    45.247] (**) Option "_source" "server/udev"
+[    45.248] (II) event10 - Video Bus: is tagged by udev as: Keyboard
+[    45.248] (II) event10 - Video Bus: device is a keyboard
+[    45.248] (II) event10 - Video Bus: device removed
+[    45.248] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input11/event10"
+[    45.248] (II) XINPUT: Adding extended input device "Video Bus" (type: KEYBOARD, id 7)
+[    45.248] (**) Option "xkb_model" "pc105"
+[    45.248] (**) Option "xkb_layout" "us"
+[    45.249] (II) event10 - Video Bus: is tagged by udev as: Keyboard
+[    45.249] (II) event10 - Video Bus: device is a keyboard
+[    45.250] (II) config/udev: Adding input device Power Button (/dev/input/event0)
+[    45.250] (**) Power Button: Applying InputClass "libinput keyboard catchall"
+[    45.250] (II) Using input driver 'libinput' for 'Power Button'
+[    45.251] (II) systemd-logind: got fd for /dev/input/event0 13:64 fd 25 paused 0
+[    45.251] (**) Power Button: always reports core events
+[    45.251] (**) Option "Device" "/dev/input/event0"
+[    45.251] (**) Option "_source" "server/udev"
+[    45.252] (II) event0  - Power Button: is tagged by udev as: Keyboard
+[    45.252] (II) event0  - Power Button: device is a keyboard
+[    45.252] (II) event0  - Power Button: device removed
+[    45.252] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:01/PNP0C0C:00/input/input0/event0"
+[    45.252] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 8)
+[    45.252] (**) Option "xkb_model" "pc105"
+[    45.252] (**) Option "xkb_layout" "us"
+[    45.253] (II) event0  - Power Button: is tagged by udev as: Keyboard
+[    45.253] (II) event0  - Power Button: device is a keyboard
+[    45.254] (II) config/udev: Adding input device Lid Switch (/dev/input/event1)
+[    45.254] (II) No input driver specified, ignoring this device.
+[    45.254] (II) This device may have been added with another device file.
+[    45.255] (II) config/udev: Adding input device HDA Intel HDMI HDMI/DP,pcm=3 (/dev/input/event13)
+[    45.255] (II) No input driver specified, ignoring this device.
+[    45.255] (II) This device may have been added with another device file.
+[    45.256] (II) config/udev: Adding input device HDA Intel HDMI HDMI/DP,pcm=7 (/dev/input/event14)
+[    45.256] (II) No input driver specified, ignoring this device.
+[    45.256] (II) This device may have been added with another device file.
+[    45.256] (II) config/udev: Adding input device HDA Intel HDMI HDMI/DP,pcm=8 (/dev/input/event15)
+[    45.256] (II) No input driver specified, ignoring this device.
+[    45.256] (II) This device may have been added with another device file.
+[    45.257] (II) config/udev: Adding input device HDA Intel HDMI HDMI/DP,pcm=9 (/dev/input/event16)
+[    45.257] (II) No input driver specified, ignoring this device.
+[    45.257] (II) This device may have been added with another device file.
+[    45.257] (II) config/udev: Adding input device HDA Intel HDMI HDMI/DP,pcm=10 (/dev/input/event17)
+[    45.257] (II) No input driver specified, ignoring this device.
+[    45.257] (II) This device may have been added with another device file.
+[    45.258] (II) config/udev: Adding input device Telink Wireless Receiver Mouse (/dev/input/event5)
+[    45.258] (**) Telink Wireless Receiver Mouse: Applying InputClass "libinput pointer catchall"
+[    45.258] (II) Using input driver 'libinput' for 'Telink Wireless Receiver Mouse'
+[    45.259] (II) systemd-logind: got fd for /dev/input/event5 13:69 fd 26 paused 0
+[    45.259] (**) Telink Wireless Receiver Mouse: always reports core events
+[    45.259] (**) Option "Device" "/dev/input/event5"
+[    45.259] (**) Option "_source" "server/udev"
+[    45.260] (II) event5  - Telink Wireless Receiver Mouse: is tagged by udev as: Mouse
+[    45.261] (II) event5  - Telink Wireless Receiver Mouse: device is a pointer
+[    45.261] (II) event5  - Telink Wireless Receiver Mouse: device removed
+[    45.261] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:248A:8367.0001/input/input6/event5"
+[    45.261] (II) XINPUT: Adding extended input device "Telink Wireless Receiver Mouse" (type: MOUSE, id 9)
+[    45.261] (**) Option "AccelerationScheme" "none"
+[    45.261] (**) Telink Wireless Receiver Mouse: (accel) selected scheme none/0
+[    45.261] (**) Telink Wireless Receiver Mouse: (accel) acceleration factor: 2.000
+[    45.261] (**) Telink Wireless Receiver Mouse: (accel) acceleration threshold: 4
+[    45.262] (II) event5  - Telink Wireless Receiver Mouse: is tagged by udev as: Mouse
+[    45.262] (II) event5  - Telink Wireless Receiver Mouse: device is a pointer
+[    45.263] (II) config/udev: Adding input device Telink Wireless Receiver Mouse (/dev/input/mouse1)
+[    45.263] (II) No input driver specified, ignoring this device.
+[    45.263] (II) This device may have been added with another device file.
+[    45.264] (II) config/udev: Adding input device Telink Wireless Receiver Consumer Control (/dev/input/event6)
+[    45.264] (**) Telink Wireless Receiver Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    45.264] (II) Using input driver 'libinput' for 'Telink Wireless Receiver Consumer Control'
+[    45.265] (II) systemd-logind: got fd for /dev/input/event6 13:70 fd 27 paused 0
+[    45.265] (**) Telink Wireless Receiver Consumer Control: always reports core events
+[    45.265] (**) Option "Device" "/dev/input/event6"
+[    45.265] (**) Option "_source" "server/udev"
+[    45.266] (II) event6  - Telink Wireless Receiver Consumer Control: is tagged by udev as: Keyboard
+[    45.266] (II) event6  - Telink Wireless Receiver Consumer Control: device is a keyboard
+[    45.266] (II) event6  - Telink Wireless Receiver Consumer Control: device removed
+[    45.266] (II) libinput: Telink Wireless Receiver Consumer Control: needs a virtual subdevice
+[    45.267] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:248A:8367.0001/input/input7/event6"
+[    45.267] (II) XINPUT: Adding extended input device "Telink Wireless Receiver Consumer Control" (type: MOUSE, id 10)
+[    45.267] (**) Option "AccelerationScheme" "none"
+[    45.267] (**) Telink Wireless Receiver Consumer Control: (accel) selected scheme none/0
+[    45.267] (**) Telink Wireless Receiver Consumer Control: (accel) acceleration factor: 2.000
+[    45.267] (**) Telink Wireless Receiver Consumer Control: (accel) acceleration threshold: 4
+[    45.268] (II) event6  - Telink Wireless Receiver Consumer Control: is tagged by udev as: Keyboard
+[    45.268] (II) event6  - Telink Wireless Receiver Consumer Control: device is a keyboard
+[    45.269] (II) config/udev: Adding input device Telink Wireless Receiver System Control (/dev/input/event7)
+[    45.269] (**) Telink Wireless Receiver System Control: Applying InputClass "libinput keyboard catchall"
+[    45.269] (II) Using input driver 'libinput' for 'Telink Wireless Receiver System Control'
+[    45.270] (II) systemd-logind: got fd for /dev/input/event7 13:71 fd 28 paused 0
+[    45.271] (**) Telink Wireless Receiver System Control: always reports core events
+[    45.271] (**) Option "Device" "/dev/input/event7"
+[    45.271] (**) Option "_source" "server/udev"
+[    45.272] (II) event7  - Telink Wireless Receiver System Control: is tagged by udev as: Keyboard
+[    45.272] (II) event7  - Telink Wireless Receiver System Control: device is a keyboard
+[    45.272] (II) event7  - Telink Wireless Receiver System Control: device removed
+[    45.272] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:248A:8367.0001/input/input8/event7"
+[    45.272] (II) XINPUT: Adding extended input device "Telink Wireless Receiver System Control" (type: KEYBOARD, id 11)
+[    45.272] (**) Option "xkb_model" "pc105"
+[    45.272] (**) Option "xkb_layout" "us"
+[    45.273] (II) event7  - Telink Wireless Receiver System Control: is tagged by udev as: Keyboard
+[    45.273] (II) event7  - Telink Wireless Receiver System Control: device is a keyboard
+[    45.274] (II) config/udev: Adding input device Telink Wireless Receiver (/dev/input/event8)
+[    45.274] (**) Telink Wireless Receiver: Applying InputClass "libinput keyboard catchall"
+[    45.274] (II) Using input driver 'libinput' for 'Telink Wireless Receiver'
+[    45.275] (II) systemd-logind: got fd for /dev/input/event8 13:72 fd 29 paused 0
+[    45.275] (**) Telink Wireless Receiver: always reports core events
+[    45.275] (**) Option "Device" "/dev/input/event8"
+[    45.275] (**) Option "_source" "server/udev"
+[    45.276] (II) event8  - Telink Wireless Receiver: is tagged by udev as: Keyboard
+[    45.276] (II) event8  - Telink Wireless Receiver: device is a keyboard
+[    45.277] (II) event8  - Telink Wireless Receiver: device removed
+[    45.277] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.1/0003:248A:8367.0002/input/input9/event8"
+[    45.277] (II) XINPUT: Adding extended input device "Telink Wireless Receiver" (type: KEYBOARD, id 12)
+[    45.277] (**) Option "xkb_model" "pc105"
+[    45.277] (**) Option "xkb_layout" "us"
+[    45.278] (II) event8  - Telink Wireless Receiver: is tagged by udev as: Keyboard
+[    45.278] (II) event8  - Telink Wireless Receiver: device is a keyboard
+[    45.279] (II) config/udev: Adding input device Lenovo EasyCamera: Lenovo EasyC (/dev/input/event18)
+[    45.279] (**) Lenovo EasyCamera: Lenovo EasyC: Applying InputClass "libinput keyboard catchall"
+[    45.279] (II) Using input driver 'libinput' for 'Lenovo EasyCamera: Lenovo EasyC'
+[    45.280] (II) systemd-logind: got fd for /dev/input/event18 13:82 fd 30 paused 0
+[    45.280] (**) Lenovo EasyCamera: Lenovo EasyC: always reports core events
+[    45.280] (**) Option "Device" "/dev/input/event18"
+[    45.280] (**) Option "_source" "server/udev"
+[    45.281] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: is tagged by udev as: Keyboard
+[    45.281] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: device is a keyboard
+[    45.281] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: device removed
+[    45.281] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-6/2-6:1.0/input/input19/event18"
+[    45.281] (II) XINPUT: Adding extended input device "Lenovo EasyCamera: Lenovo EasyC" (type: KEYBOARD, id 13)
+[    45.281] (**) Option "xkb_model" "pc105"
+[    45.281] (**) Option "xkb_layout" "us"
+[    45.282] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: is tagged by udev as: Keyboard
+[    45.283] (II) event18 - Lenovo EasyCamera: Lenovo EasyC: device is a keyboard
+[    45.283] (II) config/udev: Adding input device HDA Intel PCH Mic (/dev/input/event11)
+[    45.283] (II) No input driver specified, ignoring this device.
+[    45.283] (II) This device may have been added with another device file.
+[    45.284] (II) config/udev: Adding input device HDA Intel PCH Headphone (/dev/input/event12)
+[    45.284] (II) No input driver specified, ignoring this device.
+[    45.284] (II) This device may have been added with another device file.
+[    45.285] (II) config/udev: Adding input device Ideapad extra buttons (/dev/input/event9)
+[    45.285] (**) Ideapad extra buttons: Applying InputClass "libinput keyboard catchall"
+[    45.285] (II) Using input driver 'libinput' for 'Ideapad extra buttons'
+[    45.286] (II) systemd-logind: got fd for /dev/input/event9 13:73 fd 31 paused 0
+[    45.286] (**) Ideapad extra buttons: always reports core events
+[    45.286] (**) Option "Device" "/dev/input/event9"
+[    45.286] (**) Option "_source" "server/udev"
+[    45.287] (II) event9  - Ideapad extra buttons: is tagged by udev as: Keyboard
+[    45.287] (II) event9  - Ideapad extra buttons: device is a keyboard
+[    45.287] (II) event9  - Ideapad extra buttons: device removed
+[    45.287] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1f.0/PNP0C09:00/VPC2004:00/input/input10/event9"
+[    45.287] (II) XINPUT: Adding extended input device "Ideapad extra buttons" (type: KEYBOARD, id 14)
+[    45.287] (**) Option "xkb_model" "pc105"
+[    45.287] (**) Option "xkb_layout" "us"
+[    45.288] (II) event9  - Ideapad extra buttons: is tagged by udev as: Keyboard
+[    45.288] (II) event9  - Ideapad extra buttons: device is a keyboard
+[    45.289] (II) config/udev: Adding input device AT Translated Set 2 keyboard (/dev/input/event3)
+[    45.289] (**) AT Translated Set 2 keyboard: Applying InputClass "libinput keyboard catchall"
+[    45.289] (II) Using input driver 'libinput' for 'AT Translated Set 2 keyboard'
+[    45.291] (II) systemd-logind: got fd for /dev/input/event3 13:67 fd 32 paused 0
+[    45.291] (**) AT Translated Set 2 keyboard: always reports core events
+[    45.291] (**) Option "Device" "/dev/input/event3"
+[    45.291] (**) Option "_source" "server/udev"
+[    45.292] (II) event3  - AT Translated Set 2 keyboard: is tagged by udev as: Keyboard
+[    45.292] (II) event3  - AT Translated Set 2 keyboard: device is a keyboard
+[    45.292] (II) event3  - AT Translated Set 2 keyboard: device removed
+[    45.292] (**) Option "config_info" "udev:/sys/devices/platform/i8042/serio0/input/input3/event3"
+[    45.292] (II) XINPUT: Adding extended input device "AT Translated Set 2 keyboard" (type: KEYBOARD, id 15)
+[    45.292] (**) Option "xkb_model" "pc105"
+[    45.292] (**) Option "xkb_layout" "us"
+[    45.293] (II) event3  - AT Translated Set 2 keyboard: is tagged by udev as: Keyboard
+[    45.293] (II) event3  - AT Translated Set 2 keyboard: device is a keyboard
+[    45.294] (II) config/udev: Adding input device ETPS/2 Elantech Touchpad (/dev/input/event4)
+[    45.294] (**) ETPS/2 Elantech Touchpad: Applying InputClass "libinput touchpad catchall"
+[    45.294] (II) Using input driver 'libinput' for 'ETPS/2 Elantech Touchpad'
+[    45.295] (II) systemd-logind: got fd for /dev/input/event4 13:68 fd 33 paused 0
+[    45.295] (**) ETPS/2 Elantech Touchpad: always reports core events
+[    45.295] (**) Option "Device" "/dev/input/event4"
+[    45.295] (**) Option "_source" "server/udev"
+[    45.296] (II) event4  - ETPS/2 Elantech Touchpad: is tagged by udev as: Touchpad
+[    45.296] (II) event4  - ETPS/2 Elantech Touchpad: device is a touchpad
+[    45.296] (II) event4  - ETPS/2 Elantech Touchpad: device removed
+[    45.296] (**) Option "config_info" "udev:/sys/devices/platform/i8042/serio1/input/input5/event4"
+[    45.296] (II) XINPUT: Adding extended input device "ETPS/2 Elantech Touchpad" (type: TOUCHPAD, id 16)
+[    45.297] (**) Option "AccelerationScheme" "none"
+[    45.297] (**) ETPS/2 Elantech Touchpad: (accel) selected scheme none/0
+[    45.297] (**) ETPS/2 Elantech Touchpad: (accel) acceleration factor: 2.000
+[    45.297] (**) ETPS/2 Elantech Touchpad: (accel) acceleration threshold: 4
+[    45.297] (II) event4  - ETPS/2 Elantech Touchpad: is tagged by udev as: Touchpad
+[    45.298] (II) event4  - ETPS/2 Elantech Touchpad: device is a touchpad
+[    45.298] (II) config/udev: Adding input device ETPS/2 Elantech Touchpad (/dev/input/mouse0)
+[    45.298] (II) No input driver specified, ignoring this device.
+[    45.298] (II) This device may have been added with another device file.
+[    45.312] (**) Telink Wireless Receiver Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    45.312] (II) Using input driver 'libinput' for 'Telink Wireless Receiver Consumer Control'
+[    45.312] (II) systemd-logind: returning pre-existing fd for /dev/input/event6 13:70
+[    45.312] (**) Telink Wireless Receiver Consumer Control: always reports core events
+[    45.312] (**) Option "Device" "/dev/input/event6"
+[    45.312] (**) Option "_source" "_driver/libinput"
+[    45.313] (II) libinput: Telink Wireless Receiver Consumer Control: is a virtual subdevice
+[    45.313] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:248A:8367.0001/input/input7/event6"
+[    45.313] (II) XINPUT: Adding extended input device "Telink Wireless Receiver Consumer Control" (type: KEYBOARD, id 17)
+[    45.313] (**) Option "xkb_model" "pc105"
+[    45.313] (**) Option "xkb_layout" "us"
+[    50.269] (II) modeset(0): EDID vendor "CMN", prod id 5565
+[    50.269] (II) modeset(0): Printing DDC gathered Modelines:
+[    50.269] (II) modeset(0): Modeline "1366x768"x0.0   76.42  1366 1434 1479 1592  768 772 779 800 -hsync -vsync (48.0 kHz eP)
+[   777.550] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  1134.493] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  1157.954] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  1160.083] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  1164.807] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  1276.355] (EE) client bug: timer event5 debounce: offset negative (-40ms)
+[  1790.788] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  2227.527] (EE) client bug: timer event5 debounce: offset negative (-38ms)
+[  2227.552] (EE) client bug: timer event5 debounce short: offset negative (-75ms)
+[  2592.923] (EE) client bug: timer event5 debounce: offset negative (-886ms)
+[  2592.972] (EE) client bug: timer event5 debounce short: offset negative (-948ms)
+[  3457.672] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  3458.312] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  3460.072] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  3461.096] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  3464.480] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  3464.481] (II) event5  - Telink Wireless Receiver Mouse: WARNING: log rate limit exceeded (5 msgs per 30000ms). Discarding future messages.
+[  3468.602] (EE) client bug: timer event5 debounce: offset negative (-1339ms)
+[  3468.606] (EE) client bug: timer event5 debounce: offset negative (-1119ms)
+[  3468.606] (EE) client bug: timer event5 debounce short: offset negative (-1132ms)
+[  3470.500] (EE) client bug: timer event5 debounce: offset negative (-724ms)
+[  3470.500] (EE) client bug: timer event5 debounce: offset negative (-468ms)
+[  3470.500] (EE) client bug: timer event5 debounce short: offset negative (-481ms)
+[  3679.886] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  3680.958] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  3681.522] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  3747.176] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  3748.230] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  8149.582] (EE) client bug: timer event5 debounce: offset negative (-326ms)
+[  8149.619] (EE) client bug: timer event5 debounce: offset negative (-187ms)
+[  8149.619] (EE) client bug: timer event5 debounce short: offset negative (-200ms)
+[  8229.845] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  8238.464] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[  8239.138] (EE) client bug: timer event4 tap: offset negative (-332ms)
+[  8241.425] (EE) client bug: timer event4 tap: offset negative (-964ms)
+[  9471.796] (EE) client bug: timer event4 tap: offset negative (-421ms)
+[ 10560.452] (EE) client bug: timer event5 debounce: offset negative (-47ms)
+[ 11784.975] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 11815.031] (EE) client bug: timer event5 debounce: offset negative (-567ms)
+[ 11815.031] (EE) client bug: timer event5 debounce short: offset negative (-580ms)
+[ 11822.881] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 11831.562] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 11840.889] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 11846.245] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 11861.727] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 11867.174] (EE) client bug: timer event5 debounce: offset negative (-529ms)
+[ 11867.174] (EE) client bug: timer event5 debounce: offset negative (-309ms)
+[ 11867.174] (EE) client bug: timer event5 debounce short: offset negative (-322ms)
+[ 11873.340] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 11880.785] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 11890.639] (EE) client bug: timer event5 debounce: offset negative (-382ms)
+[ 11890.639] (EE) client bug: timer event5 debounce: offset negative (-186ms)
+[ 11890.639] (EE) client bug: timer event5 debounce short: offset negative (-199ms)
+[ 12044.896] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 12045.611] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 12046.135] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 12053.117] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 12054.358] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 12054.359] (II) event5  - Telink Wireless Receiver Mouse: WARNING: log rate limit exceeded (5 msgs per 30000ms). Discarding future messages.
+[ 12071.825] (EE) client bug: timer event5 debounce: offset negative (-597ms)
+[ 12071.912] (EE) client bug: timer event5 debounce: offset negative (-448ms)
+[ 12071.912] (EE) client bug: timer event5 debounce short: offset negative (-461ms)
+[ 12087.310] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 12091.471] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 12999.833] (EE) client bug: timer event5 debounce: offset negative (-43ms)
+[ 13135.975] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14268.291] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14290.556] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14291.994] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14303.221] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14439.092] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14511.170] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14553.367] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14555.898] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14698.223] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14712.610] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14718.164] (EE) client bug: timer event5 debounce: offset negative (-905ms)
+[ 14718.164] (EE) client bug: timer event5 debounce: offset negative (-530ms)
+[ 14718.164] (EE) client bug: timer event5 debounce short: offset negative (-543ms)
+[ 14720.809] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 14820.616] (EE) client bug: timer event5 debounce: offset negative (-307ms)
+[ 14820.650] (EE) client bug: timer event5 debounce: offset negative (-95ms)
+[ 14820.650] (EE) client bug: timer event5 debounce short: offset negative (-108ms)
+[ 15649.782] (EE) client bug: timer event5 debounce: offset negative (-270ms)
+[ 15649.958] (EE) client bug: timer event5 debounce short: offset negative (-459ms)
+[ 16275.891] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 16277.203] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 16279.778] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 16348.998] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 16354.330] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 16401.318] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 16417.163] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 16711.466] (EE) client bug: timer event4 tap: offset negative (-154ms)
+[ 16712.770] (EE) client bug: timer event4 tap: offset negative (-191ms)
+[ 16762.373] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
+[ 16762.374] (EE) client bug: timer event4 tap: offset negative (-52ms)
+[ 16764.704] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
+[ 16764.704] (EE) client bug: timer event4 tap: offset negative (-124ms)
+[ 16819.610] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
+[ 16866.356] (EE) client bug: timer event4 tap: offset negative (-1588ms)
+[ 16871.995] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
+[ 16871.995] (EE) client bug: timer event4 tap: offset negative (-1357ms)
+[ 16874.166] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
+[ 16874.166] (EE) client bug: timer event4 tap: offset negative (-1249ms)
+[ 16957.115] (II) event4  - ETPS/2 Elantech Touchpad: SYN_DROPPED event - some input events have been lost.
+[ 17880.246] (EE) client bug: timer event4 tap: offset negative (-585ms)
+[ 17929.534] (EE) client bug: timer event4 tap: offset negative (-30777ms)
+[ 17929.535] (EE) client bug: timer event4 tap: offset negative (-29590ms)
+[ 17929.535] (EE) client bug: timer event4 tap: offset negative (-29500ms)
+[ 17929.535] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 17933.876] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 17937.543] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 17940.502] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 17942.653] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 17942.653] (II) event5  - Telink Wireless Receiver Mouse: WARNING: log rate limit exceeded (5 msgs per 30000ms). Discarding future messages.
+[ 18055.104] (EE) client bug: timer event5 debounce: offset negative (-21773ms)
+[ 18056.405] (EE) client bug: timer event5 debounce: offset negative (-23079ms)
+[ 18056.405] (EE) client bug: timer event5 debounce short: offset negative (-23092ms)
+[ 18059.441] (EE) client bug: timer event5 debounce: offset negative (-13487ms)
+[ 18059.441] (EE) client bug: timer event5 debounce: offset negative (-13107ms)
+[ 18059.441] (EE) client bug: timer event5 debounce short: offset negative (-13120ms)
+[ 18059.441] (EE) client bug: timer event5 debounce: offset negative (-5499ms)
+[ 18059.441] (EE) client bug: timer event5 debounce: offset negative (-5263ms)
+[ 18059.441] (EE) client bug: timer event5 debounce short: offset negative (-5276ms)
+[ 18059.441] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 18082.021] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 18098.040] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 18106.410] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 18108.902] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 18129.204] (EE) client bug: timer event4 tap: offset negative (-1381ms)
+[ 18144.083] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 18150.888] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 18150.888] (EE) client bug: timer event5 debounce: offset negative (-163ms)
+[ 18164.571] (II) event5  - Telink Wireless Receiver Mouse: SYN_DROPPED event - some input events have been lost.
+[ 18164.572] (EE) client bug: timer event4 keyboard: offset negative (-7439ms)
+[ 18164.572] (EE) client bug: timer event4 keyboard: offset negative (-6908ms)
+[ 18186.912] (II) event3  - AT Translated Set 2 keyboard: SYN_DROPPED event - some input events have been lost.
+[ 18186.912] (EE) client bug: timer event4 tap: offset negative (-4458ms)
+[ 18186.912] (EE) client bug: timer event4 tap: offset negative (-4422ms)
+[ 18186.912] (EE) client bug: timer event4 tap: offset negative (-4329ms)
+[ 18186.913] (EE) client bug: timer event4 tap: offset negative (-4074ms)
+[ 18186.913] (EE) client bug: timer event4 tap: offset negative (-4015ms)
+[ 18186.913] (EE) client bug: timer event4 tap: offset negative (-3743ms)
+[ 18186.913] (EE) client bug: timer event4 tap: offset negative (-3736ms)
+[ 18186.913] (EE) client bug: timer event4 middlebutton: offset negative (-3322ms)

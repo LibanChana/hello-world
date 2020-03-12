@@ -1,0 +1,16 @@
+file:///home/liban/document/moringa-school-projects/cookie-recipe/my-first-website/css/styles.css {"mtime":1584018684430,"ctime":1584002187096,"size":176,"etag":"34o05qbsp5l","orphaned":false}
+h1 {
+   color: blue;
+   text-align: center;
+} 
+h2{
+   color: green;
+   font-style: italic;
+   text-align: center;
+}
+p{
+  font-family: sans-serif;
+}
+ul {
+   line-height: 40px;s
+}

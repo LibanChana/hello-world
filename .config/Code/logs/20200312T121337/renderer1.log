@@ -1,0 +1,4 @@
+[2020-03-12 12:13:56.111] [renderer1] [error] Error: [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-03-12 12:13:56.138] [renderer1] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-03-12 12:14:05.304] [renderer1] [warning] UNRESPONSIVE extension host, 'ritwickdey.LiveServer' took 100% of 5524.009ms, saved PROFILE here: '/tmp/exthost-b926d0.cpuprofile' [{"id":"gc","total":2667,"percentage":0},{"id":"ritwickdey.LiveServer","total":5520905,"percentage":100}]
+[2020-03-12 16:06:39.700] [renderer1] [warning] UNRESPONSIVE extension host, 'vscode.git' took 100% of 7687.615ms, saved PROFILE here: '/tmp/exthost-0fbf0c.cpuprofile' [{"id":"vscode.git","total":7687261,"percentage":100}]
